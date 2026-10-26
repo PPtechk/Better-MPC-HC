@@ -1,0 +1,7 @@
+REGEDIT4
+
+; Default settings of a new Better MPC-HC environment on Linux
+
+[HKEY_CURRENT_USER\Software\MPC-HC\MPC-HC\Settings]
+; the update checker asks the original MPC-HC website, don't ask about it on the first start
+"UpdaterAutoCheck"=dword:00000000

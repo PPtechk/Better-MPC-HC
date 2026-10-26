@@ -35,3 +35,5 @@
 ipch
 /MSBuild.exe
 /local-build/msbuild_forwarder/MSBuild.exe
+/linux/build
+/linux/cache

@@ -1,0 +1,13 @@
+Better MPC-HC for Linux (AppImage)
+
+This AppImage contains:
+
+- Better MPC-HC, the Windows build from https://github.com/PPtechk/Better-MPC-HC
+  License: GNU General Public License v3 (opt/better-mpc-hc/COPYING.txt).
+
+- Wine 11.0, portable build by Kron4ek: https://github.com/Kron4ek/Wine-Builds
+  Wine: https://www.winehq.org, source code: https://dl.winehq.org/wine/source/11.0/
+  License: GNU Lesser General Public License v2.1 or later.
+
+- The AppImage runtime: https://github.com/AppImage/type2-runtime
+  License: MIT.

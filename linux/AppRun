@@ -1,0 +1,86 @@
+#!/bin/sh
+# Better MPC-HC launcher: runs the Windows build of Better MPC-HC with the Wine bundled in the AppImage.
+#
+# Options:
+#   --remove-integration  removes the menu entry and the file associations
+#   --reset               deletes the settings and the Wine environment of Better MPC-HC
+set -u
+
+HERE=$(dirname "$(readlink -f "$0")")
+APP_NAME="Better MPC-HC"
+APP_ID="better-mpc-hc"
+APP_EXE="$HERE/opt/better-mpc-hc/Better-MPC-HC64.exe"
+WINE_DIR="$HERE/wine"
+DATA_HOME=${XDG_DATA_HOME:-"$HOME/.local/share"}
+DATA_DIR="$DATA_HOME/$APP_ID"
+DESKTOP_FILE="$DATA_HOME/applications/$APP_ID.desktop"
+ICON_FILE="$DATA_HOME/icons/hicolor/256x256/apps/$APP_ID.png"
+
+export WINEPREFIX="$DATA_DIR/prefix"
+export WINEDEBUG=${WINEDEBUG:--all}
+export WINEDLLOVERRIDES="mscoree,mshtml=;winemenubuilder.exe=d"
+export PATH="$WINE_DIR/bin:$PATH"
+WINE="$WINE_DIR/bin/wine"
+
+# Wine maps the root of the Linux file system to drive Z:
+to_windows_path() {
+    printf 'Z:%s' "$1" | tr '/' '\\'
+}
+
+update_desktop_database() {
+    if command -v update-desktop-database >/dev/null 2>&1; then
+        update-desktop-database -q "$DATA_HOME/applications" 2>/dev/null
+    fi
+}
+
+# Adds the menu entry and the file associations, and keeps them pointing to this AppImage
+integrate() {
+    [ -n "${APPIMAGE:-}" ] || return 0
+    mkdir -p "$(dirname "$DESKTOP_FILE")" "$(dirname "$ICON_FILE")" || return 0
+    cp -f "$HERE/$APP_ID.png" "$ICON_FILE" 2>/dev/null
+    sed -e "s|^Exec=.*|Exec=\"$APPIMAGE\" %F|" "$HERE/$APP_ID.desktop" > "$DESKTOP_FILE.tmp" || return 0
+    if cmp -s "$DESKTOP_FILE.tmp" "$DESKTOP_FILE"; then
+        rm -f "$DESKTOP_FILE.tmp"
+    else
+        mv -f "$DESKTOP_FILE.tmp" "$DESKTOP_FILE"
+        update_desktop_database
+    fi
+}
+
+case "${1:-}" in
+    --remove-integration)
+        rm -f "$DESKTOP_FILE" "$ICON_FILE"
+        update_desktop_database
+        echo "$APP_NAME: the menu entry and the file associations were removed."
+        exit 0
+        ;;
+    --reset)
+        "$WINE_DIR/bin/wineserver" -k 2>/dev/null
+        rm -rf "$DATA_DIR"
+        echo "$APP_NAME: the settings were deleted."
+        exit 0
+        ;;
+esac
+
+integrate
+
+if [ ! -f "$WINEPREFIX/system.reg" ]; then
+    mkdir -p "$DATA_DIR"
+    if command -v notify-send >/dev/null 2>&1; then
+        notify-send -i "$HERE/$APP_ID.png" "$APP_NAME" "First start, preparing the player..." 2>/dev/null
+    fi
+    "$WINE" wineboot -i >/dev/null 2>&1
+    "$WINE" regedit /S "$(to_windows_path "$HERE/defaults.reg")" >/dev/null 2>&1
+    "$WINE_DIR/bin/wineserver" -w
+fi
+
+# Files given on the command line or by the file manager are passed with their Windows path
+for arg do
+    shift
+    if [ -e "$arg" ]; then
+        arg=$(to_windows_path "$(readlink -f "$arg")")
+    fi
+    set -- "$@" "$arg"
+done
+
+exec "$WINE" "$APP_EXE" "$@"
