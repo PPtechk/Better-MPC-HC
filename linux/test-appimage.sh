@@ -1,6 +1,6 @@
 #!/bin/bash
-# Smoke test of the AppImage on a virtual display. Plays a test video with "Intro", "Episode" and
-# "Credits" chapters and saves screenshots: the Skip button, the volume above 100% and the skip itself.
+# Smoke test of the AppImage on a virtual display. Plays a test video with subtitles and "Intro", "Episode"
+# and "Credits" chapters and saves screenshots: the Skip button, the volume above 100% and the skip itself.
 #
 # Usage: linux/test-appimage.sh <AppImage> <output folder>
 # Needs: Xvfb, xdotool, ImageMagick, ffmpeg, PulseAudio.
@@ -33,9 +33,14 @@ START=25000
 END=30000
 title=Credits
 EOF
+cat > "$OUT/subtitles.srt" <<'EOF'
+1
+00:00:00,000 --> 00:00:30,000
+Subtitle test
+EOF
 ffmpeg -loglevel error -y -f lavfi -i testsrc2=size=1280x720:rate=25 -f lavfi -i sine=frequency=440 \
-    -i "$OUT/chapters.txt" -map 0:v -map 1:a -map_metadata 2 -map_chapters 2 -t 30 \
-    -c:v libx264 -pix_fmt yuv420p -c:a aac "$OUT/test.mkv"
+    -i "$OUT/chapters.txt" -i "$OUT/subtitles.srt" -map 0:v -map 1:a -map 3:s -map_metadata 2 -map_chapters 2 \
+    -t 30 -c:v libx264 -pix_fmt yuv420p -c:a aac -c:s srt -disposition:s:0 default "$OUT/test.mkv"
 
 Xvfb :99 -screen 0 1920x1080x24 >/dev/null 2>&1 &
 XVFB_PID=$!

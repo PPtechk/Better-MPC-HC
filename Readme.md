@@ -1,8 +1,8 @@
 # Better MPC-HC
 
 **Better MPC-HC** is an unofficial, modified build of
-[Media Player Classic - Home Cinema (MPC-HC)](https://github.com/mpc-hc/mpc-hc) 1.7.13 for 64-bit Windows.
-It keeps everything MPC-HC is known for (a light, fast, ad-free player with a huge format support)
+[Media Player Classic - Home Cinema (MPC-HC)](https://github.com/mpc-hc/mpc-hc) 1.7.13 for 64-bit Windows,
+also available for Linux as a self-contained AppImage. It keeps everything MPC-HC is known for (a light, fast, ad-free player with a huge format support)
 and adds a **Skip Intro / Skip Outro button** and **volume above 100%, the way VLC does it**.
 
 > Better MPC-HC is not affiliated with or endorsed by the MPC-HC Team.
@@ -20,8 +20,16 @@ and adds a **Skip Intro / Skip Outro button** and **volume above 100%, the way V
 
 ## Download
 
-Get `Better-MPC-HC.2.2.1.x64.exe` from the
-[latest release](https://github.com/PPtechk/Better-MPC-HC/releases/latest) and run it.
+From the [latest release](https://github.com/PPtechk/Better-MPC-HC/releases/latest):
+
+| System | File |
+|---|---|
+| Windows 10/11, 64-bit | `Better-MPC-HC.2.2.1.x64.exe` (installer) |
+| Linux, 64-bit (x86_64) | `Better-MPC-HC-2.2.1-x86_64.AppImage` |
+
+### Windows
+
+Run the installer.
 
 - **System requirements:** 64-bit Windows 10 or 11 (older versions are not tested), a CPU with SSE2.
 - **The installer is not code-signed.** Windows SmartScreen may warn about it:
@@ -34,6 +42,14 @@ Get `Better-MPC-HC.2.2.1.x64.exe` from the
   next to it. The program file is `Better-MPC-HC64.exe`, the old `mpc-hc64.exe` is removed. After such an
   upgrade, set the file associations again in *Options → Player → Formats*. Uninstall it from
   *Settings → Apps* like any other program.
+
+### Linux
+
+The AppImage contains the Windows build together with a portable [Wine](https://www.winehq.org), so
+there is nothing else to install. Make it executable (file manager: *Properties → Permissions → Allow
+executing file as program*, or `chmod +x Better-MPC-HC-*-x86_64.AppImage`) and double-click it. On the
+first start it adds Better MPC-HC to the application menu and to *Open With* for video and audio files.
+Details, removal and the differences from the Windows version: [linux/README.md](linux/README.md).
 
 
 ## What is Better MPC-HC?
@@ -134,7 +150,7 @@ LAV filters.
 | Volume with keys / mouse wheel | Up to 100% | Up to 200% (audio switcher boost) |
 | Name shown | MPC-HC | Better MPC-HC |
 | Version | 1.7.13 | 2.2.1 |
-| Published builds | 32-bit and 64-bit | 64-bit |
+| Published builds | Windows 32-bit and 64-bit | Windows 64-bit, Linux x86_64 (AppImage with Wine) |
 | Windows versions | XP SP3 – 10 | Windows 10 and 11 (no XP support) |
 | Compiler | Visual Studio 2015 (v140_xp), Windows 8.1 SDK | VS 2019 Build Tools (v140), Windows 10 SDK 10.0.19041 |
 | FFmpeg compiler | GCC 7 (MinGW-w64) | GCC 16 (MSYS2 MinGW-w64) |
@@ -184,6 +200,8 @@ Compared to the `1.7.13` tag of MPC-HC:
 - Program file name: `src/mpc-hc/mpc-hc.vcxproj`, `CrashReporterDialog/CrashReporterDialog.cpp`,
   `src/MPCTestAPI/MPCTestAPIDlg.cpp`, `build.bat`, `distrib/mpc-hc_setup.iss`
 - Build: `local-build/`, `Directory.Build.rsp`, `.gitignore`
+- Linux AppImage: `linux/` (launcher, build and test scripts), `.github/workflows/linux-appimage.yml`
+  (builds the AppImage from a release installer and tests it on a virtual display)
 
 
 ## Credits
@@ -221,6 +239,9 @@ Better MPC-HC exists thanks to the work of many people:
   zita-resampler, ResizableLib, TreePropSheet, CSizingControlBar and [zlib](https://zlib.net/).
 - Build tools: [Inno Setup](https://jrsoftware.org/isinfo.php) by Jordan Russell and Martijn Laan,
   [MSYS2](https://www.msys2.org/), Microsoft Visual Studio Build Tools.
+- Linux version: [Wine](https://www.winehq.org/) (LGPL) in the portable build by
+  [Kron4ek](https://github.com/Kron4ek/Wine-Builds), packed with [AppImage](https://appimage.org/)
+  tools, see [linux/THIRD-PARTY.txt](linux/THIRD-PARTY.txt).
 
 Looking for an actively developed MPC-HC? The [MPC-HC fork by clsid2](https://github.com/clsid2/mpc-hc)
 continues the original project with regular updates.

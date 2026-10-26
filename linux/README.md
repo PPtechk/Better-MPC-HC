@@ -42,9 +42,11 @@ then delete the AppImage file.
 
 ## Differences from the Windows version
 
-The player, the Skip Intro/Outro button and the volume up to 200% work the same way. Because it runs in
-Wine:
+The player, the subtitles, the Skip Intro/Outro button and the volume up to 200% work the same way.
+Because it runs in Wine:
 
+- the video renderer is *VMR-9 (renderless)* by default (*Options → Playback → Output*). EVR Custom
+  Presenter, the Windows default, distorts the picture under Wine,
 - hardware video decoding (DXVA) isn't available, videos are decoded by the CPU,
 - the madVR renderer and the Direct3D exclusive fullscreen mode can't be used,
 - the file dialogs show the Linux files on drive `Z:` (your home folder is `Z:\home\<user>`).

@@ -5,3 +5,6 @@ REGEDIT4
 [HKEY_CURRENT_USER\Software\MPC-HC\MPC-HC\Settings]
 ; the update checker asks the original MPC-HC website, don't ask about it on the first start
 "UpdaterAutoCheck"=dword:00000000
+; VMR-9 (renderless): with Wine this is the renderer that keeps the aspect ratio and shows the subtitles
+; and the on-screen messages (EVR-CP, the Windows default, distorts the picture)
+"DSVidRen"=dword:00000006
