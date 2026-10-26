@@ -336,12 +336,18 @@ void CPlayerToolBar::OnUpdateVolumeMute(CCmdUI* pCmdUI)
 
 BOOL CPlayerToolBar::OnVolumeUp(UINT nID)
 {
+    if (m_pMainFrame->StepVolumeAboveMax(true)) {
+        return TRUE;
+    }
     m_volctrl.IncreaseVolume();
     return FALSE;
 }
 
 BOOL CPlayerToolBar::OnVolumeDown(UINT nID)
 {
+    if (m_pMainFrame->StepVolumeAboveMax(false)) {
+        return TRUE;
+    }
     m_volctrl.DecreaseVolume();
     return FALSE;
 }

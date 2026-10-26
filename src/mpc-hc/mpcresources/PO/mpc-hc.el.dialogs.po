@@ -896,8 +896,8 @@ msgid "Warning"
 msgstr "Προειδοποίηση"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC1"
-msgid "MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
-msgstr "Το MPC-HC δεν μπορεί να αποδόσει κάποια από τα pin στο γράφημα. Ίσως να μην έχετε εγκατεστημένους τους απαραίτητους κωδικοποιητές ή φίλτρα στο σύστημα."
+msgid "Better MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
+msgstr "Το Better MPC-HC δεν μπορεί να αποδόσει κάποια από τα pin στο γράφημα. Ίσως να μην έχετε εγκατεστημένους τους απαραίτητους κωδικοποιητές ή φίλτρα στο σύστημα."
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC2"
 msgid "The following pin(s) failed to find a connectable filter:"
@@ -1764,8 +1764,8 @@ msgid "Crash reporter"
 msgstr "Αναφορά κατάρρευσης"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_STATIC"
-msgid "We are sorry, it seems MPC-HC just crashed. :("
-msgstr "Λυπούμαστε. Φαίνεται ότι το MPC-HC μόλις κατέρρευσε. :("
+msgid "We are sorry, it seems Better MPC-HC just crashed. :("
+msgstr "Λυπούμαστε. Φαίνεται ότι το Better MPC-HC μόλις κατέρρευσε. :("
 
 msgctxt "IDD_CRASH_REPORTER_IDC_CHECK1"
 msgid "Send a bug report to help us diagnose and fix the problem."
@@ -1788,10 +1788,10 @@ msgid "Problem description (use English only):"
 msgstr "Περιγραφή προβλήματος (μόνο στα Αγγλικά):"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON1"
-msgid "Restart MPC-HC"
-msgstr "Επανεκκίνηση του MPC-HC"
+msgid "Restart Better MPC-HC"
+msgstr "Επανεκκίνηση του Better MPC-HC"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON2"
-msgid "Quit MPC-HC"
-msgstr "Έξοδος του MPC-HC"
+msgid "Quit Better MPC-HC"
+msgstr "Έξοδος του Better MPC-HC"
 

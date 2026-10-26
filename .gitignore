@@ -33,3 +33,5 @@
 /src/thirdparty/DoctorDump/obj
 /src/thirdparty/LAVFilters/obj
 ipch
+/MSBuild.exe
+/local-build/msbuild_forwarder/MSBuild.exe

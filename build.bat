@@ -219,7 +219,7 @@ IF %ERRORLEVEL% NEQ 0 (
 ) ELSE (
   CALL "%COMMON%" :SubMsg "INFO" "mpc-hc.sln %BUILDCFG% %1 compiled successfully"
 )
-IF /I "%SIGN%" == "True" CALL :SubSign MPC-HC mpc-hc*.exe
+IF /I "%SIGN%" == "True" CALL :SubSign MPC-HC Better-MPC-HC*.exe
 IF /I "%SIGN%" == "True" CALL :SubSign MPC-HC *.dll %LAVFILTERSDIR%
 IF /I "%SIGN%" == "True" CALL :SubSign MPC-HC *.ax %LAVFILTERSDIR%
 IF /I "%SIGN%" == "True" CALL :SubSign MPC-HC CrashReporterDialog.dll CrashReporter
@@ -428,9 +428,9 @@ IF /I "%NAME%" == "MPC-HC" (
     IF NOT EXIST "%PCKG_NAME%\%LAVFILTERSDIR%" MD "%PCKG_NAME%\%LAVFILTERSDIR%"
   )
   IF /I "%ARCH%" == "x64" (
-    COPY /Y /V "%VS_OUT_DIR%\mpc-hc64.exe" "%PCKG_NAME%\mpc-hc64.exe" >NUL
+    COPY /Y /V "%VS_OUT_DIR%\Better-MPC-HC64.exe" "%PCKG_NAME%\Better-MPC-HC64.exe" >NUL
   ) ELSE (
-    COPY /Y /V "%VS_OUT_DIR%\mpc-hc.exe"   "%PCKG_NAME%\mpc-hc.exe" >NUL
+    COPY /Y /V "%VS_OUT_DIR%\Better-MPC-HC.exe"   "%PCKG_NAME%\Better-MPC-HC.exe" >NUL
   )
   COPY /Y /V "%VS_OUT_DIR%\mpciconlib.dll"                "%PCKG_NAME%\*.dll" >NUL
   IF NOT DEFINED MPCHC_LITE (

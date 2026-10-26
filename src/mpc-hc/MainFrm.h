@@ -39,6 +39,7 @@
 #include "PlayerStatusBar.h"
 #include "PlayerSubresyncBar.h"
 #include "PlayerToolBar.h"
+#include "SkipSegmentManager.h"
 #include "SubtitleDlDlg.h"
 #include "SubtitleUpDlg.h"
 #include "TimerWrappers.h"
@@ -196,6 +197,7 @@ private:
     friend class CPlayerSeekBar; // for accessing m_controls.ControlChecked()
     friend class CChildView; // for accessing m_controls.DelayShowNotLoaded()
     friend class SubtitlesProvider;
+    friend class CSkipSegmentManager;
 
     // TODO: wrap these graph objects into a class to make it look cleaner
 
@@ -392,6 +394,7 @@ public:
     void SetPlaybackMode(int iNewStatus);
     bool IsMuted() { return m_wndToolBar.GetVolume() == -10000; }
     int GetVolume() { return m_wndToolBar.m_volctrl.GetPos(); }
+    bool StepVolumeAboveMax(bool bUp);
 
 public:
     CMainFrame();
@@ -980,6 +983,7 @@ public:
     CWnd*           m_pVideoWnd;            // Current Video (main display screen or 2nd)
     CFullscreenWnd* m_pFullscreenWnd;
     CVMROSD     m_OSD;
+    CSkipSegmentManager m_skipSegments;
     bool        m_bOSDDisplayTime;
     int         m_nCurSubtitle;
     long        m_lSubtitleShift;

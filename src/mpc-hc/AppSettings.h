@@ -617,6 +617,7 @@ public:
     bool            bFastSeek;
     enum { FASTSEEK_LATEST_KEYFRAME, FASTSEEK_NEAREST_KEYFRAME } eFastSeekMethod;
     bool            fShowChapters;
+    bool            bShowSkipButton;
     bool            bNotifySkype;
     bool            fPreventMinimize;
     bool            bUseEnhancedTaskBar;

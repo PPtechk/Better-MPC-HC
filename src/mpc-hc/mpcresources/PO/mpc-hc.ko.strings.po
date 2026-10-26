@@ -302,7 +302,7 @@ msgid "The entered time is greater than the file duration."
 msgstr ""
 
 msgctxt "IDS_MISSING_ICONS_LIB"
-msgid "The icons library \"mpciconlib.dll\" is missing.\nThe player's default icon will be used for file associations.\nPlease, reinstall MPC-HC to get \"mpciconlib.dll\"."
+msgid "The icons library \"mpciconlib.dll\" is missing.\nThe player's default icon will be used for file associations.\nPlease, reinstall Better MPC-HC to get \"mpciconlib.dll\"."
 msgstr ""
 
 msgctxt "IDS_SUBDL_DLG_FILENAME_COL"
@@ -626,8 +626,8 @@ msgid "Only available if you have DirectX 9 installed. Very stable but it will n
 msgstr ""
 
 msgctxt "IDC_DSVMR9REN"
-msgid "Same as the VMR-9 (windowed), but with the Allocator-Presenter plugin of MPC-HC for subtitling. Overlay video mirroring MIGHT work. \"True Color\" desktop color space recommended. Recommended for Windows XP."
-msgstr "VMR-9 (창화면)과 같으나, 자막표시를 위해서 MPC-HC의 플러그인이 동작하는 렌더러입니다. 오버레이 비디오 미러링이 가능합니다. TV-OUT기능을 사용할수 있고 바탕화면배색이 32비트로 설정되어있을때만 정상작동합니다. (YUY2출력만 가능)"
+msgid "Same as the VMR-9 (windowed), but with the Allocator-Presenter plugin of Better MPC-HC for subtitling. Overlay video mirroring MIGHT work. \"True Color\" desktop color space recommended. Recommended for Windows XP."
+msgstr "VMR-9 (창화면)과 같으나, 자막표시를 위해서 Better MPC-HC의 플러그인이 동작하는 렌더러입니다. 오버레이 비디오 미러링이 가능합니다. TV-OUT기능을 사용할수 있고 바탕화면배색이 32비트로 설정되어있을때만 정상작동합니다. (YUY2출력만 가능)"
 
 msgctxt "IDC_DSDXR"
 msgid "Same as the VMR-9 (renderless), but uses a true two-pass bicubic resizer."
@@ -646,7 +646,7 @@ msgid "Only available on Vista or later or on XP with at least .NET Framework 3.
 msgstr ""
 
 msgctxt "IDC_DSEVR_CUSTOM"
-msgid "Same as the EVR, but with the Allocator-Presenter of MPC-HC for subtitling and postprocessing. Recommended for Windows Vista or later."
+msgid "Same as the EVR, but with the Allocator-Presenter of Better MPC-HC for subtitling and postprocessing. Recommended for Windows Vista or later."
 msgstr ""
 
 msgctxt "IDC_DSMADVR"
@@ -862,8 +862,8 @@ msgid "Increasing the number of buffered subpictures should in general improve t
 msgstr ""
 
 msgctxt "IDC_BUTTON_EXT_SET"
-msgid "After clicking this button, the checked state of the format group will reflect the actual file association for MPC-HC. A newly added extension will usually make it grayed, so don't forget to check it again before closing this dialog!"
-msgstr "이 버튼을 클릭하면 파일 형식 그룹이 MPC-HC 실제 파일에 연결됩니다. 새로 추가된 확장자는 보통 회색으로 표시되므로 이 대화상자를 닫기전에 확인하십시오."
+msgid "After clicking this button, the checked state of the format group will reflect the actual file association for Better MPC-HC. A newly added extension will usually make it grayed, so don't forget to check it again before closing this dialog!"
+msgstr "이 버튼을 클릭하면 파일 형식 그룹이 Better MPC-HC 실제 파일에 연결됩니다. 새로 추가된 확장자는 보통 회색으로 표시되므로 이 대화상자를 닫기전에 확인하십시오."
 
 msgctxt "IDC_CHECK_ALLOW_DROPPING_SUBPIC"
 msgid "Disabling this option will prevent the subtitles from blinking but it may cause the video renderer to skip some video frames."
@@ -1402,7 +1402,7 @@ msgid "After Playback: Close"
 msgstr ""
 
 msgctxt "IDS_FRAME_INIT_FAILED"
-msgid "MPC-HC encountered a problem during initialization. With your help we might be able to fix the issue.\n\nDo you want to report it?"
+msgid "Better MPC-HC encountered a problem during initialization. With your help we might be able to fix the issue.\n\nDo you want to report it?"
 msgstr ""
 
 msgctxt "IDS_TIME_SHIFT_TOOLTIP"
@@ -1410,7 +1410,7 @@ msgid "Enter a positive value if the audio is early, a negative value if it is l
 msgstr ""
 
 msgctxt "IDS_WEBUI_DISABLED_PREVIEW_MSG"
-msgid "Preview is currently disabled. You can enable it in MPC-HC's options."
+msgid "Preview is currently disabled. You can enable it in Better MPC-HC's options."
 msgstr ""
 
 msgctxt "IDS_WEBUI_PREVIEW_WARNING"
@@ -1530,7 +1530,7 @@ msgid "Nearest keyframe"
 msgstr ""
 
 msgctxt "IDS_HOOKS_FAILED"
-msgid "MPC-HC encountered a problem during initialization. DVD playback may not work correctly. This might be caused by some incompatibilities with certain security tools.\n\nDo you want to report this issue?"
+msgid "Better MPC-HC encountered a problem during initialization. DVD playback may not work correctly. This might be caused by some incompatibilities with certain security tools.\n\nDo you want to report this issue?"
 msgstr ""
 
 msgctxt "IDS_PPAGEFULLSCREEN_SHOWNEVER"
@@ -1586,12 +1586,12 @@ msgid "Reset settings"
 msgstr "설정 초기화"
 
 msgctxt "IDS_RESET_SETTINGS_WARNING"
-msgid "Are you sure you want to restore MPC-HC to its default settings?\nBe warned that ALL your current settings will be lost!"
-msgstr "MPC-HC 초기 설정으로 복원하시겠습니까?\n현재 설정들은 모두 지워집니다!"
+msgid "Are you sure you want to restore Better MPC-HC to its default settings?\nBe warned that ALL your current settings will be lost!"
+msgstr "Better MPC-HC 초기 설정으로 복원하시겠습니까?\n현재 설정들은 모두 지워집니다!"
 
 msgctxt "IDS_RESET_SETTINGS_MUTEX"
-msgid "Please close all instances of MPC-HC so that the default settings can be restored."
-msgstr "초기 설정이 복원될 수 있도록 모든 MPC-HC 플레이어를 종료해주십시오."
+msgid "Please close all instances of Better MPC-HC so that the default settings can be restored."
+msgstr "초기 설정이 복원될 수 있도록 모든 Better MPC-HC 플레이어를 종료해주십시오."
 
 msgctxt "IDS_EXPORT_SETTINGS"
 msgid "Export settings"
@@ -2142,19 +2142,19 @@ msgid "%s, %s %u Hz %d bits %d %s"
 msgstr ""
 
 msgctxt "IDS_ADD_TO_PLAYLIST"
-msgid "Add to MPC-HC Playlist"
-msgstr "MPC-HC 재생목록에 추가"
+msgid "Add to Better MPC-HC Playlist"
+msgstr "Better MPC-HC 재생목록에 추가"
 
 msgctxt "IDS_OPEN_WITH_MPC"
-msgid "Play with MPC-HC"
-msgstr "MPC-HC 으로 재생"
+msgid "Play with Better MPC-HC"
+msgstr "Better MPC-HC 으로 재생"
 
 msgctxt "IDS_CANNOT_CHANGE_FORMAT"
-msgid "MPC-HC has not enough privileges to change files formats associations. Please click on the \"Run as administrator\" button."
+msgid "Better MPC-HC has not enough privileges to change files formats associations. Please click on the \"Run as administrator\" button."
 msgstr ""
 
 msgctxt "IDS_APP_DESCRIPTION"
-msgid "MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback. We are 100% spyware free, there are no advertisements or toolbars."
+msgid "Better MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback. We are 100% spyware free, there are no advertisements or toolbars."
 msgstr ""
 
 msgctxt "IDS_MAINFRM_12"
@@ -2202,7 +2202,7 @@ msgid "DVD: Incompatible Disc And Decoder Regions"
 msgstr "DVD: 호환성이 없는 디스크 및 디코더 지역"
 
 msgctxt "IDS_D3DFS_WARNING"
-msgid "This option is designed to avoid tearing. However, it will also prevent MPC-HC from displaying the context menu and any dialog box during playback.\n\nDo you really want to activate this option?"
+msgid "This option is designed to avoid tearing. However, it will also prevent Better MPC-HC from displaying the context menu and any dialog box during playback.\n\nDo you really want to activate this option?"
 msgstr "이 옵션은 티어링을 회피하기 위해 고안되었습니다. 하지만, 재생하는 동안 플레이어의 메뉴나 대화상자가 표시되는데에 문제가 발생 할 수 있습니다.\n\n이 옵션을 활성화하시겠습니까?"
 
 msgctxt "IDS_MAINFRM_139"
@@ -2538,8 +2538,8 @@ msgid "Decrease VSync Offset"
 msgstr "V싱크 오프셋 감소"
 
 msgctxt "IDS_MAINFRM_136"
-msgid "MPC-HC D3D Fullscreen"
-msgstr "MPC-HC D3D 전체화면"
+msgid "Better MPC-HC D3D Fullscreen"
+msgstr "Better MPC-HC D3D 전체화면"
 
 msgctxt "IDS_MAINFRM_137"
 msgid "Unknown format"
@@ -2566,7 +2566,7 @@ msgid "Volume boost Max"
 msgstr "볼륨 부스트 최대"
 
 msgctxt "IDS_USAGE"
-msgid "Usage: mpc-hc.exe \"pathname\" [switches]"
+msgid "Usage: Better-MPC-HC64.exe \"pathname\" [switches]"
 msgstr ""
 
 msgctxt "IDS_UNKNOWN_SWITCH"
@@ -3386,11 +3386,11 @@ msgid "Cannot frame-step, try a different video renderer."
 msgstr "프레임 단위 이동에 문제가 있으면, 다른 비디오 렌더러를 사용해보세요."
 
 msgctxt "IDS_SCREENSHOT_ERROR_REAL"
-msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for RealMedia.\nSelect one of the DirectX renderers for RealMedia in MPC-HC's output options and reopen the file."
+msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for RealMedia.\nSelect one of the DirectX renderers for RealMedia in Better MPC-HC's output options and reopen the file."
 msgstr "'이미지 저장' 과 '썸넴일 저장' 은 비디오 렌더러가 RealMedia 기본렌더러로 설정되어있을 때는 작동하지 않습니다.\n'출력' 옵션에서 RealMedia를 위한 DirectX 렌더러로 변경한 후에 파일을 다시 여십시오."
 
 msgctxt "IDS_SCREENSHOT_ERROR_QT"
-msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for QuickTime.\nSelect one of the DirectX renderers for QuickTime in MPC-HC's output options and reopen the file."
+msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for QuickTime.\nSelect one of the DirectX renderers for QuickTime in Better MPC-HC's output options and reopen the file."
 msgstr "'이미지 저장' 과 '썸넴일 저장' 은 비디오 렌더러가 QuickTime 기본렌더러로 설정되어있을 때는 작동하지 않습니다.\n'출력' 옵션에서 QuickTime을 위한 DirectX 렌더러로 변경한 후에 파일을 다시 여십시오."
 
 msgctxt "IDS_SCREENSHOT_ERROR_SHOCKWAVE"
@@ -3538,7 +3538,7 @@ msgid "Enter your preferred languages here.\nFor example, type: \"eng jap swe\""
 msgstr ""
 
 msgctxt "IDS_OVERRIDE_EXT_SPLITTER_CHOICE"
-msgid "External splitters can have their own language preference options thus MPC-HC default behavior is not to change their initial choice.\nEnable this option if you want MPC-HC to control external splitters."
+msgid "External splitters can have their own language preference options thus Better MPC-HC default behavior is not to change their initial choice.\nEnable this option if you want Better MPC-HC to control external splitters."
 msgstr ""
 
 msgctxt "IDS_NAVIGATE_BD_PLAYLISTS"
@@ -3918,7 +3918,7 @@ msgid "/iconsassoc\tReassociate format icons"
 msgstr ""
 
 msgctxt "IDS_CMD_NOFOCUS"
-msgid "/nofocus\t\tOpen MPC-HC in background"
+msgid "/nofocus\t\tOpen Better MPC-HC in background"
 msgstr ""
 
 msgctxt "IDS_CMD_WEBPORT"
@@ -3934,7 +3934,7 @@ msgid "/nocrashreporter\tDisable the crash reporter"
 msgstr ""
 
 msgctxt "IDS_CMD_SLAVE"
-msgid "/slave \"hWnd\"\tUse MPC-HC as slave"
+msgid "/slave \"hWnd\"\tUse Better MPC-HC as slave"
 msgstr ""
 
 msgctxt "IDS_CMD_HWGPU"

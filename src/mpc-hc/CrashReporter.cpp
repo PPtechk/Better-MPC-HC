@@ -47,7 +47,7 @@ void CrashReporter::Enable(LPCTSTR langDll /*= nullptr*/)
         sizeof(appInfo),
         "31c48823-ce52-401b-8425-888388161757",
         "mpc-hc",
-        L"MPC-HC",
+        L"Better MPC-HC",
         L"MPC-HC Team",
         {
             USHORT(VersionInfo::GetMajorNumber()),

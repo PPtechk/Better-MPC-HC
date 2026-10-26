@@ -304,8 +304,8 @@ msgid "The entered time is greater than the file duration."
 msgstr "Наведено време је веће од трајања датотеке."
 
 msgctxt "IDS_MISSING_ICONS_LIB"
-msgid "The icons library \"mpciconlib.dll\" is missing.\nThe player's default icon will be used for file associations.\nPlease, reinstall MPC-HC to get \"mpciconlib.dll\"."
-msgstr "Недостаје библиотека икона „mpciconlib.dll“.\nКористиће се подразумевана икона плејера за повезаности датотека.\nПоново инсталирајте MPC-HC да бисте имали „mpciconlib.dll“."
+msgid "The icons library \"mpciconlib.dll\" is missing.\nThe player's default icon will be used for file associations.\nPlease, reinstall Better MPC-HC to get \"mpciconlib.dll\"."
+msgstr "Недостаје библиотека икона „mpciconlib.dll“.\nКористиће се подразумевана икона плејера за повезаности датотека.\nПоново инсталирајте Better MPC-HC да бисте имали „mpciconlib.dll“."
 
 msgctxt "IDS_SUBDL_DLG_FILENAME_COL"
 msgid "File"
@@ -628,7 +628,7 @@ msgid "Only available if you have DirectX 9 installed. Very stable but it will n
 msgstr ""
 
 msgctxt "IDC_DSVMR9REN"
-msgid "Same as the VMR-9 (windowed), but with the Allocator-Presenter plugin of MPC-HC for subtitling. Overlay video mirroring MIGHT work. \"True Color\" desktop color space recommended. Recommended for Windows XP."
+msgid "Same as the VMR-9 (windowed), but with the Allocator-Presenter plugin of Better MPC-HC for subtitling. Overlay video mirroring MIGHT work. \"True Color\" desktop color space recommended. Recommended for Windows XP."
 msgstr "Исто као VMR-9 (у прозору), али са додатком додељивач-излагач за титловање. Пресликавање прекривајућег видео-записа ће можда радити. Препоручује се да активирате пун спектар боја. Погодно за ОС Windows XP."
 
 msgctxt "IDC_DSDXR"
@@ -648,7 +648,7 @@ msgid "Only available on Vista or later or on XP with at least .NET Framework 3.
 msgstr "Доступно само на ОС Vista или новијем, или на XP-у са инсталираним .NET Framework-ом 3.5."
 
 msgctxt "IDC_DSEVR_CUSTOM"
-msgid "Same as the EVR, but with the Allocator-Presenter of MPC-HC for subtitling and postprocessing. Recommended for Windows Vista or later."
+msgid "Same as the EVR, but with the Allocator-Presenter of Better MPC-HC for subtitling and postprocessing. Recommended for Windows Vista or later."
 msgstr "Исто као EVR, али са додатком додељивач-излагач за титловање и накнадну обраду. Погодно за ОС Windows Vista или новији."
 
 msgctxt "IDC_DSMADVR"
@@ -864,8 +864,8 @@ msgid "Increasing the number of buffered subpictures should in general improve t
 msgstr "Повећавањем броја баферованих подслика обично ћете побољшати перформансе рендеровања на рачун веће употребе RAM меморије."
 
 msgctxt "IDC_BUTTON_EXT_SET"
-msgid "After clicking this button, the checked state of the format group will reflect the actual file association for MPC-HC. A newly added extension will usually make it grayed, so don't forget to check it again before closing this dialog!"
-msgstr "Након што кликнете на ово дугме, проверено стање групе формата ће одсликавати стварну повезаност датотека за MPC-HC. Нови наставак ће обично обојити стање у сиво, зато не заборавите да га поново проверите пре него што затворите овај дијалог!"
+msgid "After clicking this button, the checked state of the format group will reflect the actual file association for Better MPC-HC. A newly added extension will usually make it grayed, so don't forget to check it again before closing this dialog!"
+msgstr "Након што кликнете на ово дугме, проверено стање групе формата ће одсликавати стварну повезаност датотека за Better MPC-HC. Нови наставак ће обично обојити стање у сиво, зато не заборавите да га поново проверите пре него што затворите овај дијалог!"
 
 msgctxt "IDC_CHECK_ALLOW_DROPPING_SUBPIC"
 msgid "Disabling this option will prevent the subtitles from blinking but it may cause the video renderer to skip some video frames."
@@ -1404,7 +1404,7 @@ msgid "After Playback: Close"
 msgstr "Након репродукције: затвори"
 
 msgctxt "IDS_FRAME_INIT_FAILED"
-msgid "MPC-HC encountered a problem during initialization. With your help we might be able to fix the issue.\n\nDo you want to report it?"
+msgid "Better MPC-HC encountered a problem during initialization. With your help we might be able to fix the issue.\n\nDo you want to report it?"
 msgstr ""
 
 msgctxt "IDS_TIME_SHIFT_TOOLTIP"
@@ -1412,7 +1412,7 @@ msgid "Enter a positive value if the audio is early, a negative value if it is l
 msgstr ""
 
 msgctxt "IDS_WEBUI_DISABLED_PREVIEW_MSG"
-msgid "Preview is currently disabled. You can enable it in MPC-HC's options."
+msgid "Preview is currently disabled. You can enable it in Better MPC-HC's options."
 msgstr ""
 
 msgctxt "IDS_WEBUI_PREVIEW_WARNING"
@@ -1532,7 +1532,7 @@ msgid "Nearest keyframe"
 msgstr "најближи кључни кадар"
 
 msgctxt "IDS_HOOKS_FAILED"
-msgid "MPC-HC encountered a problem during initialization. DVD playback may not work correctly. This might be caused by some incompatibilities with certain security tools.\n\nDo you want to report this issue?"
+msgid "Better MPC-HC encountered a problem during initialization. DVD playback may not work correctly. This might be caused by some incompatibilities with certain security tools.\n\nDo you want to report this issue?"
 msgstr "Дошло је до проблема при покретању. Репродуковање DVD-а можда неће исправно радити. Разлог томе је вероватно некомпатибилни безбедносни софтвер.\n\nЖелите ли да пријавите грешку?"
 
 msgctxt "IDS_PPAGEFULLSCREEN_SHOWNEVER"
@@ -1588,12 +1588,12 @@ msgid "Reset settings"
 msgstr "Враћање подразумеваних поставки"
 
 msgctxt "IDS_RESET_SETTINGS_WARNING"
-msgid "Are you sure you want to restore MPC-HC to its default settings?\nBe warned that ALL your current settings will be lost!"
-msgstr "Заиста желите да успоставите почетне вредности MPC-HC-а?\nИмајте на уму да ће све тренутне поставке бити изгубљене!"
+msgid "Are you sure you want to restore Better MPC-HC to its default settings?\nBe warned that ALL your current settings will be lost!"
+msgstr "Заиста желите да успоставите почетне вредности Better MPC-HC-а?\nИмајте на уму да ће све тренутне поставке бити изгубљене!"
 
 msgctxt "IDS_RESET_SETTINGS_MUTEX"
-msgid "Please close all instances of MPC-HC so that the default settings can be restored."
-msgstr "Затворите све примерке MPC-HC-а како бисте вратили подразумеване поставке."
+msgid "Please close all instances of Better MPC-HC so that the default settings can be restored."
+msgstr "Затворите све примерке Better MPC-HC-а како бисте вратили подразумеване поставке."
 
 msgctxt "IDS_EXPORT_SETTINGS"
 msgid "Export settings"
@@ -2144,20 +2144,20 @@ msgid "%s, %s %u Hz %d bits %d %s"
 msgstr "%s, %s %u Hz %d бита %d %s"
 
 msgctxt "IDS_ADD_TO_PLAYLIST"
-msgid "Add to MPC-HC Playlist"
-msgstr "Додај у плеј-листу MPC-HC-а"
+msgid "Add to Better MPC-HC Playlist"
+msgstr "Додај у плеј-листу Better MPC-HC-а"
 
 msgctxt "IDS_OPEN_WITH_MPC"
-msgid "Play with MPC-HC"
-msgstr "Репродукуј помоћу MPC-HC-а"
+msgid "Play with Better MPC-HC"
+msgstr "Репродукуј помоћу Better MPC-HC-а"
 
 msgctxt "IDS_CANNOT_CHANGE_FORMAT"
-msgid "MPC-HC has not enough privileges to change files formats associations. Please click on the \"Run as administrator\" button."
-msgstr "MPC-HC нема довољно овлашћења за промену повезаности датотека. Кликните на дугме „Покрени као администратор“."
+msgid "Better MPC-HC has not enough privileges to change files formats associations. Please click on the \"Run as administrator\" button."
+msgstr "Better MPC-HC нема довољно овлашћења за промену повезаности датотека. Кликните на дугме „Покрени као администратор“."
 
 msgctxt "IDS_APP_DESCRIPTION"
-msgid "MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback. We are 100% spyware free, there are no advertisements or toolbars."
-msgstr "MPC-HC је изузетно једноставан медијски плејер за Windows отвореног кода. Подржава репродуковање свих уобичајених аудио и видео формата. Не садржи шпијунски софтвер, огласе нити траке са алаткама трећих страна."
+msgid "Better MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback. We are 100% spyware free, there are no advertisements or toolbars."
+msgstr "Better MPC-HC је изузетно једноставан медијски плејер за Windows отвореног кода. Подржава репродуковање свих уобичајених аудио и видео формата. Не садржи шпијунски софтвер, огласе нити траке са алаткама трећих страна."
 
 msgctxt "IDS_MAINFRM_12"
 msgid "channel"
@@ -2204,8 +2204,8 @@ msgid "DVD: Incompatible Disc And Decoder Regions"
 msgstr "DVD: некомпатибилни региони диска и декодера"
 
 msgctxt "IDS_D3DFS_WARNING"
-msgid "This option is designed to avoid tearing. However, it will also prevent MPC-HC from displaying the context menu and any dialog box during playback.\n\nDo you really want to activate this option?"
-msgstr "Ова опција је намењена у сврхе спречавања цепања. Ипак, за време репродукције, контекстуални мени MPC-HC-а и било који дијалог неће моћи да се прикажу.\n\nЗаиста желите да активирате ову опцију?"
+msgid "This option is designed to avoid tearing. However, it will also prevent Better MPC-HC from displaying the context menu and any dialog box during playback.\n\nDo you really want to activate this option?"
+msgstr "Ова опција је намењена у сврхе спречавања цепања. Ипак, за време репродукције, контекстуални мени Better MPC-HC-а и било који дијалог неће моћи да се прикажу.\n\nЗаиста желите да активирате ову опцију?"
 
 msgctxt "IDS_MAINFRM_139"
 msgid "Sub delay: %ld ms"
@@ -2540,8 +2540,8 @@ msgid "Decrease VSync Offset"
 msgstr "Смањи помак вертикалне синхронизације"
 
 msgctxt "IDS_MAINFRM_136"
-msgid "MPC-HC D3D Fullscreen"
-msgstr "MPC-HC D3D режим целог екрана"
+msgid "Better MPC-HC D3D Fullscreen"
+msgstr "Better MPC-HC D3D режим целог екрана"
 
 msgctxt "IDS_MAINFRM_137"
 msgid "Unknown format"
@@ -2568,7 +2568,7 @@ msgid "Volume boost Max"
 msgstr "Максимално појачање звука"
 
 msgctxt "IDS_USAGE"
-msgid "Usage: mpc-hc.exe \"pathname\" [switches]"
+msgid "Usage: Better-MPC-HC64.exe \"pathname\" [switches]"
 msgstr ""
 
 msgctxt "IDS_UNKNOWN_SWITCH"
@@ -3388,12 +3388,12 @@ msgid "Cannot frame-step, try a different video renderer."
 msgstr "Не могу да премотавам по кадровима. Пробајте други видео-рендерер."
 
 msgctxt "IDS_SCREENSHOT_ERROR_REAL"
-msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for RealMedia.\nSelect one of the DirectX renderers for RealMedia in MPC-HC's output options and reopen the file."
-msgstr "Функције „Сачувај слику“ и „Сачувај сличице“ не раде са подразумеваним видео-рендерером за RealMedia.\nИзаберите један од DirectX рендерера за RealMedia у MPC-HC-овим излазним опцијама и поново отворите датотеку."
+msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for RealMedia.\nSelect one of the DirectX renderers for RealMedia in Better MPC-HC's output options and reopen the file."
+msgstr "Функције „Сачувај слику“ и „Сачувај сличице“ не раде са подразумеваним видео-рендерером за RealMedia.\nИзаберите један од DirectX рендерера за RealMedia у Better MPC-HC-овим излазним опцијама и поново отворите датотеку."
 
 msgctxt "IDS_SCREENSHOT_ERROR_QT"
-msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for QuickTime.\nSelect one of the DirectX renderers for QuickTime in MPC-HC's output options and reopen the file."
-msgstr "Функције „Сачувај слику“ и „Сачувај сличице“ не раде са подразумеваним видео-рендерером за QuickTime.\nИзаберите један од DirectX рендерера за QuickTime у MPC-HC-овим излазним опцијама и поново отворите датотеку."
+msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for QuickTime.\nSelect one of the DirectX renderers for QuickTime in Better MPC-HC's output options and reopen the file."
+msgstr "Функције „Сачувај слику“ и „Сачувај сличице“ не раде са подразумеваним видео-рендерером за QuickTime.\nИзаберите један од DirectX рендерера за QuickTime у Better MPC-HC-овим излазним опцијама и поново отворите датотеку."
 
 msgctxt "IDS_SCREENSHOT_ERROR_SHOCKWAVE"
 msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work for Shockwave files."
@@ -3540,8 +3540,8 @@ msgid "Enter your preferred languages here.\nFor example, type: \"eng jap swe\""
 msgstr "Овде унесите жељене језике.\nНа пример: „eng jap swe“"
 
 msgctxt "IDS_OVERRIDE_EXT_SPLITTER_CHOICE"
-msgid "External splitters can have their own language preference options thus MPC-HC default behavior is not to change their initial choice.\nEnable this option if you want MPC-HC to control external splitters."
-msgstr "Спољни разделници могу да имају сопствене поставке језика; подразумевано понашање MPC-HC-а је да не мења њихов првобитни избор.\nОмогућите ову опцију ако желите да MPC-HC управља спољним разделницима."
+msgid "External splitters can have their own language preference options thus Better MPC-HC default behavior is not to change their initial choice.\nEnable this option if you want Better MPC-HC to control external splitters."
+msgstr "Спољни разделници могу да имају сопствене поставке језика; подразумевано понашање Better MPC-HC-а је да не мења њихов првобитни избор.\nОмогућите ову опцију ако желите да Better MPC-HC управља спољним разделницима."
 
 msgctxt "IDS_NAVIGATE_BD_PLAYLISTS"
 msgid "&Blu-Ray playlists"
@@ -3920,7 +3920,7 @@ msgid "/iconsassoc\tReassociate format icons"
 msgstr ""
 
 msgctxt "IDS_CMD_NOFOCUS"
-msgid "/nofocus\t\tOpen MPC-HC in background"
+msgid "/nofocus\t\tOpen Better MPC-HC in background"
 msgstr ""
 
 msgctxt "IDS_CMD_WEBPORT"
@@ -3936,7 +3936,7 @@ msgid "/nocrashreporter\tDisable the crash reporter"
 msgstr ""
 
 msgctxt "IDS_CMD_SLAVE"
-msgid "/slave \"hWnd\"\tUse MPC-HC as slave"
+msgid "/slave \"hWnd\"\tUse Better MPC-HC as slave"
 msgstr ""
 
 msgctxt "IDS_CMD_HWGPU"

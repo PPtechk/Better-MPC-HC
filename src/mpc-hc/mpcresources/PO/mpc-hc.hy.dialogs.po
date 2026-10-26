@@ -893,8 +893,8 @@ msgid "Warning"
 msgstr "Ուշադրություն"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC1"
-msgid "MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
-msgstr "MPC-HC-ն չի կարողանում վերարտադրել որոշ հոսքեր, հնարավոր է, որ տեղակայված չէ համապատասխան կոդավորիչը կամ ֆիլտրը։"
+msgid "Better MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
+msgstr "Better MPC-HC-ն չի կարողանում վերարտադրել որոշ հոսքեր, հնարավոր է, որ տեղակայված չէ համապատասխան կոդավորիչը կամ ֆիլտրը։"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC2"
 msgid "The following pin(s) failed to find a connectable filter:"
@@ -1761,7 +1761,7 @@ msgid "Crash reporter"
 msgstr "Վթարի զեկույց"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_STATIC"
-msgid "We are sorry, it seems MPC-HC just crashed. :("
+msgid "We are sorry, it seems Better MPC-HC just crashed. :("
 msgstr ""
 
 msgctxt "IDD_CRASH_REPORTER_IDC_CHECK1"
@@ -1785,10 +1785,10 @@ msgid "Problem description (use English only):"
 msgstr "Խնդրի նկարագրություն (միայն անգլերենով)."
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON1"
-msgid "Restart MPC-HC"
-msgstr "Վերագործարկել MPC-HC-ը"
+msgid "Restart Better MPC-HC"
+msgstr "Վերագործարկել Better MPC-HC-ը"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON2"
-msgid "Quit MPC-HC"
-msgstr "Փակել MPC-HC-ը"
+msgid "Quit Better MPC-HC"
+msgstr "Փակել Better MPC-HC-ը"
 

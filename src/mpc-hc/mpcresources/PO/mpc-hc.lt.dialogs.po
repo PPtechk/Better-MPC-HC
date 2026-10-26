@@ -894,8 +894,8 @@ msgid "Warning"
 msgstr "Įspėjimas"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC1"
-msgid "MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
-msgstr "MPC-HC negali groti kai kurių srautų, galbūt, pas jus nėra įdiegtas reikalingas kodekas arba filtras."
+msgid "Better MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
+msgstr "Better MPC-HC negali groti kai kurių srautų, galbūt, pas jus nėra įdiegtas reikalingas kodekas arba filtras."
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC2"
 msgid "The following pin(s) failed to find a connectable filter:"
@@ -1762,8 +1762,8 @@ msgid "Crash reporter"
 msgstr "Lūžio ataskaita"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_STATIC"
-msgid "We are sorry, it seems MPC-HC just crashed. :("
-msgstr "Apgailestaujame, tačiau, matomai, MPC-HC nulūžo. :("
+msgid "We are sorry, it seems Better MPC-HC just crashed. :("
+msgstr "Apgailestaujame, tačiau, matomai, Better MPC-HC nulūžo. :("
 
 msgctxt "IDD_CRASH_REPORTER_IDC_CHECK1"
 msgid "Send a bug report to help us diagnose and fix the problem."
@@ -1786,10 +1786,10 @@ msgid "Problem description (use English only):"
 msgstr "Problemos aprašymas (tik anglų kalba)"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON1"
-msgid "Restart MPC-HC"
-msgstr "Paleisti iš naujo MPC-HC"
+msgid "Restart Better MPC-HC"
+msgstr "Paleisti iš naujo Better MPC-HC"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON2"
-msgid "Quit MPC-HC"
-msgstr "Išeiti iš MPC-HC"
+msgid "Quit Better MPC-HC"
+msgstr "Išeiti iš Better MPC-HC"
 

@@ -18,8 +18,8 @@
 
 STRINGTABLE
 BEGIN
-    AFX_IDS_APP_TITLE       "MPC-HC"
-    IDR_MAINFRAME           "Media Player Classic Home Cinema"
+    AFX_IDS_APP_TITLE       "Better MPC-HC"
+    IDR_MAINFRAME           "Better MPC-HC"
 END
 
 STRINGTABLE

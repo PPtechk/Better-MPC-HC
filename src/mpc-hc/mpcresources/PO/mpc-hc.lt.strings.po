@@ -306,8 +306,8 @@ msgid "The entered time is greater than the file duration."
 msgstr "Įvestas laikas didesnis už kūrinio trukmę"
 
 msgctxt "IDS_MISSING_ICONS_LIB"
-msgid "The icons library \"mpciconlib.dll\" is missing.\nThe player's default icon will be used for file associations.\nPlease, reinstall MPC-HC to get \"mpciconlib.dll\"."
-msgstr "Nerasta „mpciconlib.dll“ piktogramų biblioteka.\nFailų susiejimams bus panaudota numatytoji grotuvo piktograma.\nPrašome įdiegti iš naujo MPC-HC, kad gautumėte „mpciconlib.dll“."
+msgid "The icons library \"mpciconlib.dll\" is missing.\nThe player's default icon will be used for file associations.\nPlease, reinstall Better MPC-HC to get \"mpciconlib.dll\"."
+msgstr "Nerasta „mpciconlib.dll“ piktogramų biblioteka.\nFailų susiejimams bus panaudota numatytoji grotuvo piktograma.\nPrašome įdiegti iš naujo Better MPC-HC, kad gautumėte „mpciconlib.dll“."
 
 msgctxt "IDS_SUBDL_DLG_FILENAME_COL"
 msgid "File"
@@ -630,8 +630,8 @@ msgid "Only available if you have DirectX 9 installed. Very stable but it will n
 msgstr "Galima tik jei turite įdiegtą „DirectX 9“. Labai stabilu, tačiau jis niekada nenaudoja Overlėjaus renderinimo ir dėl to jis gali būti šiek tiek lėtesnis nei Overlėjaus mikseris."
 
 msgctxt "IDC_DSVMR9REN"
-msgid "Same as the VMR-9 (windowed), but with the Allocator-Presenter plugin of MPC-HC for subtitling. Overlay video mirroring MIGHT work. \"True Color\" desktop color space recommended. Recommended for Windows XP."
-msgstr "Tas pats, kaip ir VMR-9 (windowed), bet su pluginu MPC-HC Allocator-Presenter titrams vaizduoti. \"Veidrodinis\" vaizdas overlėjuje GALI veikti. Rekomenduojamas spalvų gylis. Rekomenduojama Windows XP."
+msgid "Same as the VMR-9 (windowed), but with the Allocator-Presenter plugin of Better MPC-HC for subtitling. Overlay video mirroring MIGHT work. \"True Color\" desktop color space recommended. Recommended for Windows XP."
+msgstr "Tas pats, kaip ir VMR-9 (windowed), bet su pluginu Better MPC-HC Allocator-Presenter titrams vaizduoti. \"Veidrodinis\" vaizdas overlėjuje GALI veikti. Rekomenduojamas spalvų gylis. Rekomenduojama Windows XP."
 
 msgctxt "IDC_DSDXR"
 msgid "Same as the VMR-9 (renderless), but uses a true two-pass bicubic resizer."
@@ -650,7 +650,7 @@ msgid "Only available on Vista or later or on XP with at least .NET Framework 3.
 msgstr "Pasiekiama tik su Vista ar naujesne, galima ir su XP su įdiegtu .NET Framework 3.5."
 
 msgctxt "IDC_DSEVR_CUSTOM"
-msgid "Same as the EVR, but with the Allocator-Presenter of MPC-HC for subtitling and postprocessing. Recommended for Windows Vista or later."
+msgid "Same as the EVR, but with the Allocator-Presenter of Better MPC-HC for subtitling and postprocessing. Recommended for Windows Vista or later."
 msgstr "Tas pats, kaip ir EVR, bet naudoja Allocator-Presenter subtitrams ir apdorojimui. Rekomenduojama Windows Vista  ar naujesnėms."
 
 msgctxt "IDC_DSMADVR"
@@ -866,8 +866,8 @@ msgid "Increasing the number of buffered subpictures should in general improve t
 msgstr "Buferinių fragmentų kiekio vaizdavimas įprastai padidina renderinimo greitį dėl GPU vaizdo atminties didesnio naudojimo."
 
 msgctxt "IDC_BUTTON_EXT_SET"
-msgid "After clicking this button, the checked state of the format group will reflect the actual file association for MPC-HC. A newly added extension will usually make it grayed, so don't forget to check it again before closing this dialog!"
-msgstr "Spragtelėjus šį mygtuką, pasirinkta formatų grupės būsena vaizduos realius failų susiejumus su MPC-HC. Pridėti išplėtimai įprastai nustato būseną į „pilką“ būseną, todėl nepamirškite pažymėti juos vėl prieš uždarant dialogą!"
+msgid "After clicking this button, the checked state of the format group will reflect the actual file association for Better MPC-HC. A newly added extension will usually make it grayed, so don't forget to check it again before closing this dialog!"
+msgstr "Spragtelėjus šį mygtuką, pasirinkta formatų grupės būsena vaizduos realius failų susiejumus su Better MPC-HC. Pridėti išplėtimai įprastai nustato būseną į „pilką“ būseną, todėl nepamirškite pažymėti juos vėl prieš uždarant dialogą!"
 
 msgctxt "IDC_CHECK_ALLOW_DROPPING_SUBPIC"
 msgid "Disabling this option will prevent the subtitles from blinking but it may cause the video renderer to skip some video frames."
@@ -1406,16 +1406,16 @@ msgid "After Playback: Close"
 msgstr "Baigus groti: Uždaryti"
 
 msgctxt "IDS_FRAME_INIT_FAILED"
-msgid "MPC-HC encountered a problem during initialization. With your help we might be able to fix the issue.\n\nDo you want to report it?"
-msgstr "Inicializacijos metu MPC-HC susidūrė su problema. Su jūsų pagalba mes galime ištaisyti problemą.\n\nAr jūs norite pranešti apie ją?"
+msgid "Better MPC-HC encountered a problem during initialization. With your help we might be able to fix the issue.\n\nDo you want to report it?"
+msgstr "Inicializacijos metu Better MPC-HC susidūrė su problema. Su jūsų pagalba mes galime ištaisyti problemą.\n\nAr jūs norite pranešti apie ją?"
 
 msgctxt "IDS_TIME_SHIFT_TOOLTIP"
 msgid "Enter a positive value if the audio is early, a negative value if it is late."
 msgstr "Įveskite teigiamą reikšmę, jei garsas per anksti, neigiamą reikšmę, jei per vėlai."
 
 msgctxt "IDS_WEBUI_DISABLED_PREVIEW_MSG"
-msgid "Preview is currently disabled. You can enable it in MPC-HC's options."
-msgstr "Išankstinė peržiūra šiuo metu išjungta. Jūs galite ją įjungti MPC-HC nustatymuose."
+msgid "Preview is currently disabled. You can enable it in Better MPC-HC's options."
+msgstr "Išankstinė peržiūra šiuo metu išjungta. Jūs galite ją įjungti Better MPC-HC nustatymuose."
 
 msgctxt "IDS_WEBUI_PREVIEW_WARNING"
 msgid "This option can be used to preview media files from remote location. Use it only on a properly secured private network.\n\nDo you really want to enable this option?"
@@ -1534,8 +1534,8 @@ msgid "Nearest keyframe"
 msgstr "Artimiausias raktinis kadras"
 
 msgctxt "IDS_HOOKS_FAILED"
-msgid "MPC-HC encountered a problem during initialization. DVD playback may not work correctly. This might be caused by some incompatibilities with certain security tools.\n\nDo you want to report this issue?"
-msgstr "Inicializiacijos metu MPC-HC susidūrė su problema. DVD negali teisingai veikti. Tai gali sukelti saugumo įrankių nesuderinamumas.\n\nAr jūs norite pranešti apie šią problemą?"
+msgid "Better MPC-HC encountered a problem during initialization. DVD playback may not work correctly. This might be caused by some incompatibilities with certain security tools.\n\nDo you want to report this issue?"
+msgstr "Inicializiacijos metu Better MPC-HC susidūrė su problema. DVD negali teisingai veikti. Tai gali sukelti saugumo įrankių nesuderinamumas.\n\nAr jūs norite pranešti apie šią problemą?"
 
 msgctxt "IDS_PPAGEFULLSCREEN_SHOWNEVER"
 msgid "Never show"
@@ -1590,12 +1590,12 @@ msgid "Reset settings"
 msgstr "Atstatyti nustatymus"
 
 msgctxt "IDS_RESET_SETTINGS_WARNING"
-msgid "Are you sure you want to restore MPC-HC to its default settings?\nBe warned that ALL your current settings will be lost!"
-msgstr "Ar esate tikri, kad norite grąžinti MPC-HC numatytuosius nustatymus?\nĮspėjame, kad VISI jūsų dabartiniai nustatymai bus prarasti!"
+msgid "Are you sure you want to restore Better MPC-HC to its default settings?\nBe warned that ALL your current settings will be lost!"
+msgstr "Ar esate tikri, kad norite grąžinti Better MPC-HC numatytuosius nustatymus?\nĮspėjame, kad VISI jūsų dabartiniai nustatymai bus prarasti!"
 
 msgctxt "IDS_RESET_SETTINGS_MUTEX"
-msgid "Please close all instances of MPC-HC so that the default settings can be restored."
-msgstr "Prašom uždarykite visas MPC-HC kopijas pakeitimams įsigalioti."
+msgid "Please close all instances of Better MPC-HC so that the default settings can be restored."
+msgstr "Prašom uždarykite visas Better MPC-HC kopijas pakeitimams įsigalioti."
 
 msgctxt "IDS_EXPORT_SETTINGS"
 msgid "Export settings"
@@ -2146,20 +2146,20 @@ msgid "%s, %s %u Hz %d bits %d %s"
 msgstr "%s, %s %u Hz %d bitai %d %s"
 
 msgctxt "IDS_ADD_TO_PLAYLIST"
-msgid "Add to MPC-HC Playlist"
-msgstr "Įtraukti į MPC-HC grojaraštį"
+msgid "Add to Better MPC-HC Playlist"
+msgstr "Įtraukti į Better MPC-HC grojaraštį"
 
 msgctxt "IDS_OPEN_WITH_MPC"
-msgid "Play with MPC-HC"
-msgstr "Groti su MPC-HC"
+msgid "Play with Better MPC-HC"
+msgstr "Groti su Better MPC-HC"
 
 msgctxt "IDS_CANNOT_CHANGE_FORMAT"
-msgid "MPC-HC has not enough privileges to change files formats associations. Please click on the \"Run as administrator\" button."
-msgstr "MPC-HC neturi pakankamai privilegijų pakeisti formatų susiejimą. Prašom spragtelėkite „Paleisti administratoriaus teisėmis“ mygtuką."
+msgid "Better MPC-HC has not enough privileges to change files formats associations. Please click on the \"Run as administrator\" button."
+msgstr "Better MPC-HC neturi pakankamai privilegijų pakeisti formatų susiejimą. Prašom spragtelėkite „Paleisti administratoriaus teisėmis“ mygtuką."
 
 msgctxt "IDS_APP_DESCRIPTION"
-msgid "MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback. We are 100% spyware free, there are no advertisements or toolbars."
-msgstr "MPC-HC - tai nepaprastai lengvas, su atviru išeities kodu media grotuvas Windows. Jis palaiko visus populiarius vaizdo ir garso failų formatus, pasiekiamus grojimui. Mes garantuojame 100% laisvę nuo šnipinėjimo programų, reklamų ar įrankių juostų."
+msgid "Better MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback. We are 100% spyware free, there are no advertisements or toolbars."
+msgstr "Better MPC-HC - tai nepaprastai lengvas, su atviru išeities kodu media grotuvas Windows. Jis palaiko visus populiarius vaizdo ir garso failų formatus, pasiekiamus grojimui. Mes garantuojame 100% laisvę nuo šnipinėjimo programų, reklamų ar įrankių juostų."
 
 msgctxt "IDS_MAINFRM_12"
 msgid "channel"
@@ -2206,7 +2206,7 @@ msgid "DVD: Incompatible Disc And Decoder Regions"
 msgstr "DVD: Nesuderinami disko ir dekoderio regionai"
 
 msgctxt "IDS_D3DFS_WARNING"
-msgid "This option is designed to avoid tearing. However, it will also prevent MPC-HC from displaying the context menu and any dialog box during playback.\n\nDo you really want to activate this option?"
+msgid "This option is designed to avoid tearing. However, it will also prevent Better MPC-HC from displaying the context menu and any dialog box during playback.\n\nDo you really want to activate this option?"
 msgstr "Ši funkcija skirta pašalinti drebėjimą, tačiau ją įjungus trukdomas kontekstinio meniu ir dialogų vaizdavimas.\n\nAr jūs tikrai norite aktyvuoti ją?"
 
 msgctxt "IDS_MAINFRM_139"
@@ -2542,8 +2542,8 @@ msgid "Decrease VSync Offset"
 msgstr "Sumažinti VSync poslinkį"
 
 msgctxt "IDS_MAINFRM_136"
-msgid "MPC-HC D3D Fullscreen"
-msgstr "MPC-HC Pilnaekranis D3D"
+msgid "Better MPC-HC D3D Fullscreen"
+msgstr "Better MPC-HC Pilnaekranis D3D"
 
 msgctxt "IDS_MAINFRM_137"
 msgid "Unknown format"
@@ -2570,7 +2570,7 @@ msgid "Volume boost Max"
 msgstr "Garso stiprinimas Max"
 
 msgctxt "IDS_USAGE"
-msgid "Usage: mpc-hc.exe \"pathname\" [switches]"
+msgid "Usage: Better-MPC-HC64.exe \"pathname\" [switches]"
 msgstr ""
 
 msgctxt "IDS_UNKNOWN_SWITCH"
@@ -3390,11 +3390,11 @@ msgid "Cannot frame-step, try a different video renderer."
 msgstr "Peržiūra po vieną kadrą negalima, pamėginkite kitą vaizdo renderį."
 
 msgctxt "IDS_SCREENSHOT_ERROR_REAL"
-msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for RealMedia.\nSelect one of the DirectX renderers for RealMedia in MPC-HC's output options and reopen the file."
+msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for RealMedia.\nSelect one of the DirectX renderers for RealMedia in Better MPC-HC's output options and reopen the file."
 msgstr "Funkcijos „Išsaugoti paveikslėlį“ ir „Išsaugoti miniatiūras“ neveikia su sisteminiu renderiu, skirtu RealMedia.\nPasirinkite vieną iš DirectX renderių, skirtų RealMedia ir atidarykite failą iš naujo."
 
 msgctxt "IDS_SCREENSHOT_ERROR_QT"
-msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for QuickTime.\nSelect one of the DirectX renderers for QuickTime in MPC-HC's output options and reopen the file."
+msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for QuickTime.\nSelect one of the DirectX renderers for QuickTime in Better MPC-HC's output options and reopen the file."
 msgstr "Funkcijos „Išsaugoti paveikslėlį“ ir „Išsaugoti miniatiūras“ neveikia su sisteminiu renderiu, skirtu QuickTime.\n Pasirinkite vieną iš DirectX renderių, skirtų QuickTime ir atidarykite failą iš naujo."
 
 msgctxt "IDS_SCREENSHOT_ERROR_SHOCKWAVE"
@@ -3542,8 +3542,8 @@ msgid "Enter your preferred languages here.\nFor example, type: \"eng jap swe\""
 msgstr "Įveskite savo pageidaujamas kalbas čia.\nPavyzdžiui, įrašykite \"lit rus eng\""
 
 msgctxt "IDS_OVERRIDE_EXT_SPLITTER_CHOICE"
-msgid "External splitters can have their own language preference options thus MPC-HC default behavior is not to change their initial choice.\nEnable this option if you want MPC-HC to control external splitters."
-msgstr "Išoriniai spliteriai gali turėti savus kalbų nustatymus, todėl MPC-HC elgesys pagal nutylėjimą nepakeis jų pradinio pasirinkimo.\nĮjunkite šią funkciją, jei jūs norite, jog MPC-HC valdytų išorinius spliterius."
+msgid "External splitters can have their own language preference options thus Better MPC-HC default behavior is not to change their initial choice.\nEnable this option if you want Better MPC-HC to control external splitters."
+msgstr "Išoriniai spliteriai gali turėti savus kalbų nustatymus, todėl Better MPC-HC elgesys pagal nutylėjimą nepakeis jų pradinio pasirinkimo.\nĮjunkite šią funkciją, jei jūs norite, jog Better MPC-HC valdytų išorinius spliterius."
 
 msgctxt "IDS_NAVIGATE_BD_PLAYLISTS"
 msgid "&Blu-Ray playlists"
@@ -3922,7 +3922,7 @@ msgid "/iconsassoc\tReassociate format icons"
 msgstr ""
 
 msgctxt "IDS_CMD_NOFOCUS"
-msgid "/nofocus\t\tOpen MPC-HC in background"
+msgid "/nofocus\t\tOpen Better MPC-HC in background"
 msgstr ""
 
 msgctxt "IDS_CMD_WEBPORT"
@@ -3938,7 +3938,7 @@ msgid "/nocrashreporter\tDisable the crash reporter"
 msgstr ""
 
 msgctxt "IDS_CMD_SLAVE"
-msgid "/slave \"hWnd\"\tUse MPC-HC as slave"
+msgid "/slave \"hWnd\"\tUse Better MPC-HC as slave"
 msgstr ""
 
 msgctxt "IDS_CMD_HWGPU"

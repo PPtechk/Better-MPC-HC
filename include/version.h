@@ -45,9 +45,9 @@
 #include "../build/version_rev.h"
 #endif
 
-#define MPC_VERSION_MAJOR       1
-#define MPC_VERSION_MINOR       7
-#define MPC_VERSION_PATCH       13
+#define MPC_VERSION_MAJOR       2
+#define MPC_VERSION_MINOR       2
+#define MPC_VERSION_PATCH       1
 
 #ifndef NO_VERSION_REV_NEEDED
 

@@ -31,7 +31,7 @@
 
 #include "mplayerc.h"
 
-#define LCD_APP_NAME  "MPC-HC"
+#define LCD_APP_NAME  "Better MPC-HC"
 #define LCD_UPD_TIMER 40
 
 

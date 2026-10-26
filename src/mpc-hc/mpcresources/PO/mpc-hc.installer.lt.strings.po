@@ -34,16 +34,16 @@ msgid "Translations"
 msgstr "Vertimai"
 
 msgctxt "CustomMessages_msg_DeleteSettings"
-msgid "Do you also want to delete MPC-HC settings?\n\nIf you plan on installing MPC-HC again then you do not have to delete them."
-msgstr "Ar norite taip pat ištrinti MPC-HC nuostatas?\n\nJei planuojate vėl diegti MPC-HC, tada jų trinti nebūtina."
+msgid "Do you also want to delete Better MPC-HC settings?\n\nIf you plan on installing Better MPC-HC again then you do not have to delete them."
+msgstr "Ar norite taip pat ištrinti Better MPC-HC nuostatas?\n\nJei planuojate vėl diegti Better MPC-HC, tada jų trinti nebūtina."
 
 msgctxt "CustomMessages_msg_simd_sse"
-msgid "This build of MPC-HC requires a CPU with SSE extension support.\n\nYour CPU does not have those capabilities."
-msgstr "Šiai MPC-HC versijai reikalingas centrinis procesorius su SSE plėtinio palaikymu.\n\nJūsų procesorius neturi šių galimybių."
+msgid "This build of Better MPC-HC requires a CPU with SSE extension support.\n\nYour CPU does not have those capabilities."
+msgstr "Šiai Better MPC-HC versijai reikalingas centrinis procesorius su SSE plėtinio palaikymu.\n\nJūsų procesorius neturi šių galimybių."
 
 msgctxt "CustomMessages_msg_simd_sse2"
-msgid "This build of MPC-HC requires a CPU with SSE2 extension support.\n\nYour CPU does not have those capabilities."
-msgstr "Šiai MPC-HC versijai reikalingas centrinis CPU su SSE2 plėtinio palaikymu.\n\nJūsų procesorius neturi šių galimybių."
+msgid "This build of Better MPC-HC requires a CPU with SSE2 extension support.\n\nYour CPU does not have those capabilities."
+msgstr "Šiai Better MPC-HC versijai reikalingas centrinis CPU su SSE2 plėtinio palaikymu.\n\nJūsų procesorius neturi šių galimybių."
 
 msgctxt "CustomMessages_run_DownloadToolbarImages"
 msgid "Visit our Wiki page to download toolbar images"

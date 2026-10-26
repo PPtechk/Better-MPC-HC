@@ -895,8 +895,8 @@ msgid "Warning"
 msgstr "Игътибар"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC1"
-msgid "MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
-msgstr "MPC-HC кайбер ташкыннарны уйната алмый, сезнең кирәк булган кодек яки сөзгеч урнаштырылмаган була ала."
+msgid "Better MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
+msgstr "Better MPC-HC кайбер ташкыннарны уйната алмый, сезнең кирәк булган кодек яки сөзгеч урнаштырылмаган була ала."
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC2"
 msgid "The following pin(s) failed to find a connectable filter:"
@@ -1763,7 +1763,7 @@ msgid "Crash reporter"
 msgstr ""
 
 msgctxt "IDD_CRASH_REPORTER_IDC_STATIC"
-msgid "We are sorry, it seems MPC-HC just crashed. :("
+msgid "We are sorry, it seems Better MPC-HC just crashed. :("
 msgstr ""
 
 msgctxt "IDD_CRASH_REPORTER_IDC_CHECK1"
@@ -1787,10 +1787,10 @@ msgid "Problem description (use English only):"
 msgstr ""
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON1"
-msgid "Restart MPC-HC"
+msgid "Restart Better MPC-HC"
 msgstr ""
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON2"
-msgid "Quit MPC-HC"
+msgid "Quit Better MPC-HC"
 msgstr ""
 

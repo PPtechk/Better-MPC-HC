@@ -64,7 +64,8 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(SolutionDir)bin\mpc-hc_x86 Lite\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)bin\mpc-hc_x64\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Lite|x64'">$(SolutionDir)bin\mpc-hc_x64 Lite\</OutDir>
-    <TargetName Condition="'$(Platform)'=='x64'">$(ProjectName)64</TargetName>
+    <TargetName Condition="'$(Platform)'=='Win32'">Better-MPC-HC</TargetName>
+    <TargetName Condition="'$(Platform)'=='x64'">Better-MPC-HC64</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ResourceCompile>
@@ -233,6 +234,9 @@
     <ClCompile Include="SelectMediaType.cpp" />
     <ClCompile Include="Shaders.cpp" />
     <ClCompile Include="ShockwaveGraph.cpp" />
+    <ClCompile Include="SkipButton.cpp" />
+    <ClCompile Include="SkipSegmentManager.cpp" />
+    <ClCompile Include="SkipSegmentProvider.cpp" />
     <ClCompile Include="SkypeMoodMsgHandler.cpp" />
     <ClCompile Include="SVGImage.cpp" />
     <ClCompile Include="Translations.cpp" />
@@ -378,6 +382,9 @@
     <ClInclude Include="SettingsDefines.h" />
     <ClInclude Include="Shaders.h" />
     <ClInclude Include="ShockwaveGraph.h" />
+    <ClInclude Include="SkipButton.h" />
+    <ClInclude Include="SkipSegmentManager.h" />
+    <ClInclude Include="SkipSegmentProvider.h" />
     <ClInclude Include="SkypeMoodMsgHandler.h" />
     <ClInclude Include="StaticLink.h" />
     <ClInclude Include="StatusLabel.h" />

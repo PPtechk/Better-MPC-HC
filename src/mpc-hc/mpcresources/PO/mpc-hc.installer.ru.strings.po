@@ -34,16 +34,16 @@ msgid "Translations"
 msgstr "Локализации"
 
 msgctxt "CustomMessages_msg_DeleteSettings"
-msgid "Do you also want to delete MPC-HC settings?\n\nIf you plan on installing MPC-HC again then you do not have to delete them."
-msgstr "Желаете ли вы также удалить настройки MPC-HC?\n\nЕсли вы собираетесь установить MPC-HC повторно, их не нужно удалять."
+msgid "Do you also want to delete Better MPC-HC settings?\n\nIf you plan on installing Better MPC-HC again then you do not have to delete them."
+msgstr "Желаете ли вы также удалить настройки Better MPC-HC?\n\nЕсли вы собираетесь установить Better MPC-HC повторно, их не нужно удалять."
 
 msgctxt "CustomMessages_msg_simd_sse"
-msgid "This build of MPC-HC requires a CPU with SSE extension support.\n\nYour CPU does not have those capabilities."
-msgstr "Для этой сборки MPC-HC необходим процессор с поддержкой SSE-инструкций.\n\nВаш процессор не соответствует данным требованиям."
+msgid "This build of Better MPC-HC requires a CPU with SSE extension support.\n\nYour CPU does not have those capabilities."
+msgstr "Для этой сборки Better MPC-HC необходим процессор с поддержкой SSE-инструкций.\n\nВаш процессор не соответствует данным требованиям."
 
 msgctxt "CustomMessages_msg_simd_sse2"
-msgid "This build of MPC-HC requires a CPU with SSE2 extension support.\n\nYour CPU does not have those capabilities."
-msgstr "Для этой сборки MPC-HC необходим процессор с поддержкой SSE2-инструкций.\n\nВаш процессор не соответствует данным требованиям."
+msgid "This build of Better MPC-HC requires a CPU with SSE2 extension support.\n\nYour CPU does not have those capabilities."
+msgstr "Для этой сборки Better MPC-HC необходим процессор с поддержкой SSE2-инструкций.\n\nВаш процессор не соответствует данным требованиям."
 
 msgctxt "CustomMessages_run_DownloadToolbarImages"
 msgid "Visit our Wiki page to download toolbar images"

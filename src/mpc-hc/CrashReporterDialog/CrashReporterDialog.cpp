@@ -35,9 +35,9 @@ Result CALLBACK CreateCrashDialog(const ExceptionInfo& exceptionInfo, IDataBag* 
     TCHAR exePath[MAX_PATH];
     if (!GetModuleFileNameEx(exceptionInfo.Process, nullptr, exePath, _countof(exePath))) {
 #ifdef _WIN64
-        _tcscpy_s(exePath, _T("..\\mpc-hc64.exe"));
+        _tcscpy_s(exePath, _T("..\\Better-MPC-HC64.exe"));
 #else
-        _tcscpy_s(exePath, _T("..\\mpc-hc.exe"));
+        _tcscpy_s(exePath, _T("..\\Better-MPC-HC.exe"));
 #endif
     }
 

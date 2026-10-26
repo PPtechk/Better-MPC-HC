@@ -304,8 +304,8 @@ msgid "The entered time is greater than the file duration."
 msgstr "Wprowadzony czas jest większy niż czas trwania pliku."
 
 msgctxt "IDS_MISSING_ICONS_LIB"
-msgid "The icons library \"mpciconlib.dll\" is missing.\nThe player's default icon will be used for file associations.\nPlease, reinstall MPC-HC to get \"mpciconlib.dll\"."
-msgstr "Biblioteka ikon „mpciconlib.dll” nie została odnaleziona.\nSkojarzonym plikom zostanie przypisana standardowa ikona odtwarzacza.\nZainstaluj ponownie MPC-HC, aby przywrócić plik „mpciconlib.dll”."
+msgid "The icons library \"mpciconlib.dll\" is missing.\nThe player's default icon will be used for file associations.\nPlease, reinstall Better MPC-HC to get \"mpciconlib.dll\"."
+msgstr "Biblioteka ikon „mpciconlib.dll” nie została odnaleziona.\nSkojarzonym plikom zostanie przypisana standardowa ikona odtwarzacza.\nZainstaluj ponownie Better MPC-HC, aby przywrócić plik „mpciconlib.dll”."
 
 msgctxt "IDS_SUBDL_DLG_FILENAME_COL"
 msgid "File"
@@ -628,7 +628,7 @@ msgid "Only available if you have DirectX 9 installed. Very stable but it will n
 msgstr "Dostępny tylko gdy w systemie jest zainstalowany DirectX 9. Bardzo stabilne, ale nigdy nie używa trybu nakładki przez co może być trochę wolniejszy niż Overlay mixer."
 
 msgctxt "IDC_DSVMR9REN"
-msgid "Same as the VMR-9 (windowed), but with the Allocator-Presenter plugin of MPC-HC for subtitling. Overlay video mirroring MIGHT work. \"True Color\" desktop color space recommended. Recommended for Windows XP."
+msgid "Same as the VMR-9 (windowed), but with the Allocator-Presenter plugin of Better MPC-HC for subtitling. Overlay video mirroring MIGHT work. \"True Color\" desktop color space recommended. Recommended for Windows XP."
 msgstr "Renderuje przy użyciu tego samego filtra co „VMR-9 (windowed)”, lecz rozszerzono go o obsługę napisów. Powielanie obrazu może działać w trybie nakładki. Sugerowana jest 24-bitowa głębia kolorów pulpitu."
 
 msgctxt "IDC_DSDXR"
@@ -648,7 +648,7 @@ msgid "Only available on Vista or later or on XP with at least .NET Framework 3.
 msgstr "Dostępny tylko w systemie Vista i nowszych lub XP z zainstalowanymi bibliotekami .NET Framework 3.5."
 
 msgctxt "IDC_DSEVR_CUSTOM"
-msgid "Same as the EVR, but with the Allocator-Presenter of MPC-HC for subtitling and postprocessing. Recommended for Windows Vista or later."
+msgid "Same as the EVR, but with the Allocator-Presenter of Better MPC-HC for subtitling and postprocessing. Recommended for Windows Vista or later."
 msgstr "Działa tak samo jak „EVR”, ponadto z modyfikacjami umożliwiającymi obsługę napisów oraz postprocessing (shadery). Zalecany dla Windows Vista i nowszych."
 
 msgctxt "IDC_DSMADVR"
@@ -864,7 +864,7 @@ msgid "Increasing the number of buffered subpictures should in general improve t
 msgstr "Zwiększenie liczby buforowanych klatek napisów powinno poprawić wydajność renderowania kosztem użycia większej ilości pamięci karty graficznej."
 
 msgctxt "IDC_BUTTON_EXT_SET"
-msgid "After clicking this button, the checked state of the format group will reflect the actual file association for MPC-HC. A newly added extension will usually make it grayed, so don't forget to check it again before closing this dialog!"
+msgid "After clicking this button, the checked state of the format group will reflect the actual file association for Better MPC-HC. A newly added extension will usually make it grayed, so don't forget to check it again before closing this dialog!"
 msgstr "Zmienia ustawienia formatów obsługiwanych przez program. Po użyciu stan zaznaczenia bieżącej grupy formatów będzie odzwierciedlał aktualnie przypisane skojarzenia dla programu. Nowo dodane rozszerzenie sprawi, że zmieni on kolor na szary, więc proszę pamiętać o ponownym zaznaczeniu tego formatu przed zamknięciem tego okna."
 
 msgctxt "IDC_CHECK_ALLOW_DROPPING_SUBPIC"
@@ -1404,16 +1404,16 @@ msgid "After Playback: Close"
 msgstr "Po zakończeniu odtwarzania: Zamknij plik"
 
 msgctxt "IDS_FRAME_INIT_FAILED"
-msgid "MPC-HC encountered a problem during initialization. With your help we might be able to fix the issue.\n\nDo you want to report it?"
-msgstr "MPC-HC napotkał problem podczas ładowania. Z Twoją pomocą możliwe będzie naprawienie tego problemu.\n\nCzy chcesz zgłosić problem?"
+msgid "Better MPC-HC encountered a problem during initialization. With your help we might be able to fix the issue.\n\nDo you want to report it?"
+msgstr "Better MPC-HC napotkał problem podczas ładowania. Z Twoją pomocą możliwe będzie naprawienie tego problemu.\n\nCzy chcesz zgłosić problem?"
 
 msgctxt "IDS_TIME_SHIFT_TOOLTIP"
 msgid "Enter a positive value if the audio is early, a negative value if it is late."
 msgstr "Wprowadź dodatnią wartość jeżeli dźwięk wyprzedza obraz lub ujemną gdy dźwięk nie nadąża za obrazem."
 
 msgctxt "IDS_WEBUI_DISABLED_PREVIEW_MSG"
-msgid "Preview is currently disabled. You can enable it in MPC-HC's options."
-msgstr "Podgląd jest obecnie wyłączony. Można włączyć go w opcjach MPC-HC."
+msgid "Preview is currently disabled. You can enable it in Better MPC-HC's options."
+msgstr "Podgląd jest obecnie wyłączony. Można włączyć go w opcjach Better MPC-HC."
 
 msgctxt "IDS_WEBUI_PREVIEW_WARNING"
 msgid "This option can be used to preview media files from remote location. Use it only on a properly secured private network.\n\nDo you really want to enable this option?"
@@ -1532,8 +1532,8 @@ msgid "Nearest keyframe"
 msgstr "Najbliższa klatka klucz."
 
 msgctxt "IDS_HOOKS_FAILED"
-msgid "MPC-HC encountered a problem during initialization. DVD playback may not work correctly. This might be caused by some incompatibilities with certain security tools.\n\nDo you want to report this issue?"
-msgstr "MPC-HC napotkał problem podczas ładowania. Odtwarzanie DVD może nie działać w pełni poprawnie. Może to być spowodowane przez niekompatybilność z niektórymi programami zabezpieczającymi.\n\nChcesz zgłosić ten błąd?"
+msgid "Better MPC-HC encountered a problem during initialization. DVD playback may not work correctly. This might be caused by some incompatibilities with certain security tools.\n\nDo you want to report this issue?"
+msgstr "Better MPC-HC napotkał problem podczas ładowania. Odtwarzanie DVD może nie działać w pełni poprawnie. Może to być spowodowane przez niekompatybilność z niektórymi programami zabezpieczającymi.\n\nChcesz zgłosić ten błąd?"
 
 msgctxt "IDS_PPAGEFULLSCREEN_SHOWNEVER"
 msgid "Never show"
@@ -1588,12 +1588,12 @@ msgid "Reset settings"
 msgstr "Resetuj ustawienia"
 
 msgctxt "IDS_RESET_SETTINGS_WARNING"
-msgid "Are you sure you want to restore MPC-HC to its default settings?\nBe warned that ALL your current settings will be lost!"
-msgstr "Czy na pewno chcesz przywrócić domyślne ustawienia MPC-HC?\nWSZYSTKIE ustawienia zostaną utracone!"
+msgid "Are you sure you want to restore Better MPC-HC to its default settings?\nBe warned that ALL your current settings will be lost!"
+msgstr "Czy na pewno chcesz przywrócić domyślne ustawienia Better MPC-HC?\nWSZYSTKIE ustawienia zostaną utracone!"
 
 msgctxt "IDS_RESET_SETTINGS_MUTEX"
-msgid "Please close all instances of MPC-HC so that the default settings can be restored."
-msgstr "Zamknij wszystkie procesy MPC-HC, aby przywrócić ustawienia domyślne."
+msgid "Please close all instances of Better MPC-HC so that the default settings can be restored."
+msgstr "Zamknij wszystkie procesy Better MPC-HC, aby przywrócić ustawienia domyślne."
 
 msgctxt "IDS_EXPORT_SETTINGS"
 msgid "Export settings"
@@ -2144,20 +2144,20 @@ msgid "%s, %s %u Hz %d bits %d %s"
 msgstr "%s, %s %u Hz %d bitów %d %s"
 
 msgctxt "IDS_ADD_TO_PLAYLIST"
-msgid "Add to MPC-HC Playlist"
-msgstr "Dodaj do listy odtwarzania MPC-HC"
+msgid "Add to Better MPC-HC Playlist"
+msgstr "Dodaj do listy odtwarzania Better MPC-HC"
 
 msgctxt "IDS_OPEN_WITH_MPC"
-msgid "Play with MPC-HC"
-msgstr "Odtwórz w MPC-HC"
+msgid "Play with Better MPC-HC"
+msgstr "Odtwórz w Better MPC-HC"
 
 msgctxt "IDS_CANNOT_CHANGE_FORMAT"
-msgid "MPC-HC has not enough privileges to change files formats associations. Please click on the \"Run as administrator\" button."
+msgid "Better MPC-HC has not enough privileges to change files formats associations. Please click on the \"Run as administrator\" button."
 msgstr "Program nie ma wystarczających uprawnień, aby zmienić skojarzenia plików. Proszę kliknąć przycisk „Uruchom jako administrator”, aby uzyskać uprawnienia administratora."
 
 msgctxt "IDS_APP_DESCRIPTION"
-msgid "MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback. We are 100% spyware free, there are no advertisements or toolbars."
-msgstr "MPC-HC jest bardzo lekkim odtwarzaczem multimediów dla systemu Windows opartym o licencję open source. Wspierane jest odtwarzanie wszystkich popularnych formatów audio oraz wideo. Program jest w 100% wolny od wszelkiego rodzaju oprogramowania śledzącego, reklam czy też niepożądanych pasków narzędzi. "
+msgid "Better MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback. We are 100% spyware free, there are no advertisements or toolbars."
+msgstr "Better MPC-HC jest bardzo lekkim odtwarzaczem multimediów dla systemu Windows opartym o licencję open source. Wspierane jest odtwarzanie wszystkich popularnych formatów audio oraz wideo. Program jest w 100% wolny od wszelkiego rodzaju oprogramowania śledzącego, reklam czy też niepożądanych pasków narzędzi. "
 
 msgctxt "IDS_MAINFRM_12"
 msgid "channel"
@@ -2204,7 +2204,7 @@ msgid "DVD: Incompatible Disc And Decoder Regions"
 msgstr "DVD: niezgodne regiony nośnika i dekodera"
 
 msgctxt "IDS_D3DFS_WARNING"
-msgid "This option is designed to avoid tearing. However, it will also prevent MPC-HC from displaying the context menu and any dialog box during playback.\n\nDo you really want to activate this option?"
+msgid "This option is designed to avoid tearing. However, it will also prevent Better MPC-HC from displaying the context menu and any dialog box during playback.\n\nDo you really want to activate this option?"
 msgstr "Opcja ta została stworzona po to, aby zapobiegać szarpaniu obrazu podczas odtwarzania. Uniemożliwia ona jednak wyświetlanie menu kontekstowych i okien dialogowych podczas odtwarzania wideo.\n\nCzy na pewno włączyć tę opcję?"
 
 msgctxt "IDS_MAINFRM_139"
@@ -2540,8 +2540,8 @@ msgid "Decrease VSync Offset"
 msgstr "Zmniejsz przesunięcie synchronizacji pionowej"
 
 msgctxt "IDS_MAINFRM_136"
-msgid "MPC-HC D3D Fullscreen"
-msgstr "MPC-HC pełny ekran D3D"
+msgid "Better MPC-HC D3D Fullscreen"
+msgstr "Better MPC-HC pełny ekran D3D"
 
 msgctxt "IDS_MAINFRM_137"
 msgid "Unknown format"
@@ -2568,8 +2568,8 @@ msgid "Volume boost Max"
 msgstr "Maksymalne wzmocnienie głośności"
 
 msgctxt "IDS_USAGE"
-msgid "Usage: mpc-hc.exe \"pathname\" [switches]"
-msgstr "Użycie: mpc-hc.exe „ścieżka” [parametry]"
+msgid "Usage: Better-MPC-HC64.exe \"pathname\" [switches]"
+msgstr "Użycie: Better-MPC-HC64.exe „ścieżka” [parametry]"
 
 msgctxt "IDS_UNKNOWN_SWITCH"
 msgid "Unrecognized switch(es) found in command line string: \n\n"
@@ -3388,11 +3388,11 @@ msgid "Cannot frame-step, try a different video renderer."
 msgstr "Nie można przejść o klatkę do przodu, proszę spróbować użyć innego renderera obrazu."
 
 msgctxt "IDS_SCREENSHOT_ERROR_REAL"
-msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for RealMedia.\nSelect one of the DirectX renderers for RealMedia in MPC-HC's output options and reopen the file."
+msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for RealMedia.\nSelect one of the DirectX renderers for RealMedia in Better MPC-HC's output options and reopen the file."
 msgstr "Funkcje 'Zapisz obraz' oraz 'Zapisz miniatury' nie działają w połączeniu z domyślnym rendererem obrazu dla RealMedia.\nProszę wybrać jeden z rendererów DirectX dla obrazu RealMedia w opcjach strumienia wyjściowego oraz otworzyć plik ponownie."
 
 msgctxt "IDS_SCREENSHOT_ERROR_QT"
-msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for QuickTime.\nSelect one of the DirectX renderers for QuickTime in MPC-HC's output options and reopen the file."
+msgid "The \"Save Image\" and \"Save Thumbnails\" functions do not work with the default video renderer for QuickTime.\nSelect one of the DirectX renderers for QuickTime in Better MPC-HC's output options and reopen the file."
 msgstr "Funkcje 'Zapisz obraz' oraz 'Zapisz miniatury' nie działają w połączeniu z domyślnym rendererem obrazu dla QuickTime.\nProszę wybrać jeden z rendererów DirectX dla obrazu QuickTime w opcjach strumienia wyjściowego oraz otworzyć plik ponownie."
 
 msgctxt "IDS_SCREENSHOT_ERROR_SHOCKWAVE"
@@ -3540,8 +3540,8 @@ msgid "Enter your preferred languages here.\nFor example, type: \"eng jap swe\""
 msgstr "Wprowadź tutaj preferowane języki.\nNa przykład, wpisując: „eng jap swe”"
 
 msgctxt "IDS_OVERRIDE_EXT_SPLITTER_CHOICE"
-msgid "External splitters can have their own language preference options thus MPC-HC default behavior is not to change their initial choice.\nEnable this option if you want MPC-HC to control external splitters."
-msgstr "Zewnętrzne splittery mogą posiadać własne ustawienia dot. preferencji językowych, dlatego też domyślnie MPC-HC nie zmienia ich wstępnego wyboru.\nWłącz tę opcję, jeżeli chcesz aby MPC-HC kontrolował również zewnętrzne splittery."
+msgid "External splitters can have their own language preference options thus Better MPC-HC default behavior is not to change their initial choice.\nEnable this option if you want Better MPC-HC to control external splitters."
+msgstr "Zewnętrzne splittery mogą posiadać własne ustawienia dot. preferencji językowych, dlatego też domyślnie Better MPC-HC nie zmienia ich wstępnego wyboru.\nWłącz tę opcję, jeżeli chcesz aby Better MPC-HC kontrolował również zewnętrzne splittery."
 
 msgctxt "IDS_NAVIGATE_BD_PLAYLISTS"
 msgid "&Blu-Ray playlists"
@@ -3920,8 +3920,8 @@ msgid "/iconsassoc\tReassociate format icons"
 msgstr "/iconsassoc\tPrzypisz ponownie ikony do plików"
 
 msgctxt "IDS_CMD_NOFOCUS"
-msgid "/nofocus\t\tOpen MPC-HC in background"
-msgstr "/nofocus\t\tOtwiera MPC-HC w tle"
+msgid "/nofocus\t\tOpen Better MPC-HC in background"
+msgstr "/nofocus\t\tOtwiera Better MPC-HC w tle"
 
 msgctxt "IDS_CMD_WEBPORT"
 msgid "/webport N\tStart web interface on specified port"
@@ -3936,8 +3936,8 @@ msgid "/nocrashreporter\tDisable the crash reporter"
 msgstr "/nocrashreporter\tWyłącza raportowanie usterek"
 
 msgctxt "IDS_CMD_SLAVE"
-msgid "/slave \"hWnd\"\tUse MPC-HC as slave"
-msgstr "/slave „hWnd”\tUżyj MPC-HC jako okno zależne"
+msgid "/slave \"hWnd\"\tUse Better MPC-HC as slave"
+msgstr "/slave „hWnd”\tUżyj Better MPC-HC jako okno zależne"
 
 msgctxt "IDS_CMD_HWGPU"
 msgid "/hwgpu \"index\"\tSet the index of the GPU used for hardware decoding.\n\t\tOnly available for CUVID and DXVA2 (copy-back)"

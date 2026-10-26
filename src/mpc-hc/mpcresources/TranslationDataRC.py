@@ -46,7 +46,7 @@ BEGIN
             VALUE "InternalName",     "mpc-hc"
             VALUE "LegalCopyright",   MPC_COPYRIGHT_STR
             VALUE "OriginalFilename", "mpcresources.%s.dll"
-            VALUE "ProductName",      "MPC-HC"
+            VALUE "ProductName",      "Better MPC-HC"
             VALUE "ProductVersion",   MPC_VERSION_STR
         END
     END

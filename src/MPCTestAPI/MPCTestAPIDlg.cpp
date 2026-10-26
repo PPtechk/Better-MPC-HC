@@ -178,9 +178,9 @@ BOOL CRegisterCopyDataDlg::OnInitDialog()
 #endif // _DEBUG
 
 #if defined(_WIN64)
-    m_strMPCPath += _T("mpc-hc64.exe");
+    m_strMPCPath += _T("Better-MPC-HC64.exe");
 #else
-    m_strMPCPath += _T("mpc-hc.exe");
+    m_strMPCPath += _T("Better-MPC-HC.exe");
 #endif // _WIN64
 
     UpdateData(FALSE);

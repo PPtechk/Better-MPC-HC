@@ -49,7 +49,8 @@
 #include "..\include\version.h"
 
 #define copyright_str   str(MPC_COPYRIGHT_STR)
-#define app_name        "MPC-HC"
+#define app_name        "Better MPC-HC"
+#define app_filename    "Better-MPC-HC"
 
 #if MPC_NIGHTLY_RELEASE
   #define app_ver       str(MPC_VERSION_MAJOR) + "." + str(MPC_VERSION_MINOR) + "." + str(MPC_VERSION_PATCH) + "." + str(MPC_VERSION_REV)
@@ -64,16 +65,20 @@
 
 #ifdef x64Build
   #define bindir        = AddBackslash(base_bindir) + "mpc-hc_x64"
-  #define mpchc_exe     = "mpc-hc64.exe"
-  #define mpchc_ini     = "mpc-hc64.ini"
+  #define mpchc_exe     = "Better-MPC-HC64.exe"
+  #define mpchc_ini     = "Better-MPC-HC64.ini"
+  #define old_mpchc_exe = "mpc-hc64.exe"
+  #define old_mpchc_ini = "mpc-hc64.ini"
   #define lavfiltersdir = "LAVFilters64"
-  #define OutFilename   = app_name + "." + app_ver + ".x64"
+  #define OutFilename   = app_filename + "." + app_ver + ".x64"
 #else
   #define bindir        = AddBackslash(base_bindir) + "mpc-hc_x86"
-  #define mpchc_exe     = "mpc-hc.exe"
-  #define mpchc_ini     = "mpc-hc.ini"
+  #define mpchc_exe     = "Better-MPC-HC.exe"
+  #define mpchc_ini     = "Better-MPC-HC.ini"
+  #define old_mpchc_exe = "mpc-hc.exe"
+  #define old_mpchc_ini = "mpc-hc.ini"
   #define lavfiltersdir = "LAVFilters"
-  #define OutFilename   = app_name + "." + app_ver + ".x86"
+  #define OutFilename   = app_filename + "." + app_ver + ".x86"
 #endif
 
 #if defined(MPCHC_LITE)
@@ -289,6 +294,7 @@ Type: files; Name: {#quick_launch}\{#app_name}.lnk; Check: not IsTaskSelected('q
 Type: files; Name: {app}\AUTHORS;                   Check: IsUpgrade()
 Type: files; Name: {app}\ChangeLog;                 Check: IsUpgrade()
 Type: files; Name: {app}\COPYING;                   Check: IsUpgrade()
+Type: files; Name: {app}\{#old_mpchc_exe};          Check: IsUpgrade()
 
 ; old shortcuts
 #ifdef x64Build
@@ -296,12 +302,22 @@ Type: files; Name: {group}\Media Player Classic - Home Cinema x64.lnk;          
 Type: files; Name: {commondesktop}\Media Player Classic - Home Cinema x64.lnk;           Check: IsUpgrade()
 Type: files; Name: {userdesktop}\Media Player Classic - Home Cinema x64.lnk;             Check: IsUpgrade()
 Type: files; Name: {#quick_launch}\Media Player Classic - Home Cinema x64.lnk;           Check: IsUpgrade()
+Type: files; Name: {group}\MPC-HC x64.lnk;                                               Check: IsUpgrade()
+Type: files; Name: {commondesktop}\MPC-HC x64.lnk;                                       Check: IsUpgrade()
+Type: files; Name: {userdesktop}\MPC-HC x64.lnk;                                         Check: IsUpgrade()
+Type: files; Name: {#quick_launch}\MPC-HC x64.lnk;                                       Check: IsUpgrade()
 #else
 Type: files; Name: {group}\Media Player Classic - Home Cinema.lnk;                       Check: IsUpgrade()
 Type: files; Name: {commondesktop}\Media Player Classic - Home Cinema.lnk;               Check: IsUpgrade()
 Type: files; Name: {userdesktop}\Media Player Classic - Home Cinema.lnk;                 Check: IsUpgrade()
 Type: files; Name: {#quick_launch}\Media Player Classic - Home Cinema.lnk;               Check: IsUpgrade()
+Type: files; Name: {group}\MPC-HC.lnk;                                                   Check: IsUpgrade()
+Type: files; Name: {commondesktop}\MPC-HC.lnk;                                           Check: IsUpgrade()
+Type: files; Name: {userdesktop}\MPC-HC.lnk;                                             Check: IsUpgrade()
+Type: files; Name: {#quick_launch}\MPC-HC.lnk;                                           Check: IsUpgrade()
 #endif
+Type: files; Name: {group}\{cm:ProgramOnTheWeb,MPC-HC}.url;                              Check: IsUpgrade()
+Type: files; Name: {group}\{cm:UninstallProgram,MPC-HC}.lnk;                             Check: IsUpgrade()
 Type: files; Name: {group}\{cm:ProgramOnTheWeb,Media Player Classic - Home Cinema}.url;  Check: IsUpgrade()
 Type: files; Name: {group}\{cm:UninstallProgram,Media Player Classic - Home Cinema}.lnk; Check: IsUpgrade()
 
@@ -374,13 +390,13 @@ var
 begin
   if not RegQueryStringValue(HKCU, 'SOFTWARE\Gabest\Media Player Classic', 'ExePath', sInstallPath)
   or not RegQueryStringValue(HKCU, 'SOFTWARE\MPC-HC\MPC-HC', 'ExePath', sInstallPath) then begin
-    Result := ExpandConstant('{pf}\MPC-HC');
+    Result := ExpandConstant('{pf}\{#app_name}');
   end
   else begin
     RegQueryStringValue(HKCU, 'SOFTWARE\MPC-HC\MPC-HC', 'ExePath', sInstallPath);
     Result := ExtractFileDir(sInstallPath);
     if (Result = '') or not DirExists(Result) then begin
-      Result := ExpandConstant('{pf}\MPC-HC');
+      Result := ExpandConstant('{pf}\{#app_name}');
     end;
   end;
 end;
@@ -469,6 +485,9 @@ var
   iLanguage: Integer;
 begin
   if CurStep = ssPostInstall then begin
+    if FileExists(ExpandConstant('{app}\{#old_mpchc_ini}')) and not FileExists(ExpandConstant('{app}\{#mpchc_ini}')) then
+      RenameFile(ExpandConstant('{app}\{#old_mpchc_ini}'), ExpandConstant('{app}\{#mpchc_ini}'));
+
     if IsTaskSelected('reset_settings') then begin
       CleanUpSettingsAndFiles();
       RegWriteStringValue(HKCU, 'Software\MPC-HC\MPC-HC', 'ExePath', ExpandConstant('{app}\{#mpchc_exe}'));

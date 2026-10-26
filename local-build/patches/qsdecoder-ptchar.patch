@@ -1,0 +1,12 @@
+diff --git a/stdafx.h b/stdafx.h
+index cb7ed9b..d9fdcd1 100644
+--- a/stdafx.h
++++ b/stdafx.h
+@@ -6,7 +6,6 @@
+ #pragma once
+ 
+ #define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
+-#define PTCHAR TCHAR*
+ 
+ #include <tchar.h>
+ #include <stdio.h>

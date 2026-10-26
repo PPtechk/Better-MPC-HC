@@ -902,7 +902,7 @@ msgid "Warning"
 msgstr "تحذير"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC1"
-msgid "MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
+msgid "Better MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
 msgstr "مشغل الوسائط الكلاسيكي - هوم سينما لا يستطيع أن يعيد البعض من التثبيت في الرسم البياني، يحتمل أنه لا يوجد عندك الكودك المطلوب أو أن الفلاتر غير مثبته على النظام"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC2"
@@ -1770,7 +1770,7 @@ msgid "Crash reporter"
 msgstr "إرسال انهيار"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_STATIC"
-msgid "We are sorry, it seems MPC-HC just crashed. :("
+msgid "We are sorry, it seems Better MPC-HC just crashed. :("
 msgstr "نحن اسفون، يبدو ان المشغل قد تعطل. :("
 
 msgctxt "IDD_CRASH_REPORTER_IDC_CHECK1"
@@ -1794,10 +1794,10 @@ msgid "Problem description (use English only):"
 msgstr "وصف المشكلة (استخدام اللغة الإنجليزية فقط):"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON1"
-msgid "Restart MPC-HC"
+msgid "Restart Better MPC-HC"
 msgstr "اعاده تشغيل المشغل."
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON2"
-msgid "Quit MPC-HC"
+msgid "Quit Better MPC-HC"
 msgstr "اغلق المشغل"
 

@@ -140,7 +140,7 @@ bool Translations::SetLanguage(LANGID localeID, bool showErrorMsg /*= true*/)
             success = false;
             if (showErrorMsg) {
                 MessageBox(nullptr, _T("Error loading the chosen language.\n\nPlease reinstall MPC-HC."),
-                           _T("MPC-HC"), MB_ICONWARNING | MB_OK);
+                           _T("Better MPC-HC"), MB_ICONWARNING | MB_OK);
             }
         } else { // Check if the version of the resource dll is correct
             CString strSatVersion = FileVersionInfo::GetFileVersionStr(languageResource.dllPath);
@@ -152,7 +152,7 @@ bool Translations::SetLanguage(LANGID localeID, bool showErrorMsg /*= true*/)
                 success = false;
                 if (showErrorMsg) {
                     int sel = MessageBox(nullptr, _T("Your language pack will not work with this version.\n\nDo you want to visit the download page to get a full package including the translations?"),
-                                         _T("MPC-HC"), MB_ICONWARNING | MB_YESNO);
+                                         _T("Better MPC-HC"), MB_ICONWARNING | MB_YESNO);
                     if (sel == IDYES) {
                         ShellExecute(nullptr, _T("open"), DOWNLOAD_URL, nullptr, nullptr, SW_SHOWDEFAULT);
                     }

@@ -894,7 +894,7 @@ msgid "Warning"
 msgstr "Opozorilo"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC1"
-msgid "MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
+msgid "Better MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
 msgstr "Media Player Classic - Home Cinema ni mogel izrisati nekaterih priključkov v grafu, verjetno nimate nameščenih potrebnih kodekov ali filtrov."
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC2"
@@ -1762,8 +1762,8 @@ msgid "Crash reporter"
 msgstr "Poročilo o prenehanju delovanja"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_STATIC"
-msgid "We are sorry, it seems MPC-HC just crashed. :("
-msgstr "Se opravičujemo, izgleda da je se MPC-HC ravnokar sesul. :("
+msgid "We are sorry, it seems Better MPC-HC just crashed. :("
+msgstr "Se opravičujemo, izgleda da je se Better MPC-HC ravnokar sesul. :("
 
 msgctxt "IDD_CRASH_REPORTER_IDC_CHECK1"
 msgid "Send a bug report to help us diagnose and fix the problem."
@@ -1786,10 +1786,10 @@ msgid "Problem description (use English only):"
 msgstr "Opis težave (uporabljaj samo angleščino):"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON1"
-msgid "Restart MPC-HC"
-msgstr "Ponovni zagon MPC-HC"
+msgid "Restart Better MPC-HC"
+msgstr "Ponovni zagon Better MPC-HC"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON2"
-msgid "Quit MPC-HC"
-msgstr "Zapusti MPC-HC"
+msgid "Quit Better MPC-HC"
+msgstr "Zapusti Better MPC-HC"
 

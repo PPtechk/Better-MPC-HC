@@ -733,6 +733,8 @@ bool CMPlayerCApp::StoreSettingsToRegistry()
     m_pszRegistryKey = nullptr;
 
     SetRegistryKey(_T("MPC-HC"));
+    free((void*)m_pszProfileName);
+    m_pszProfileName = _tcsdup(_T("MPC-HC"));
 
     return true;
 }

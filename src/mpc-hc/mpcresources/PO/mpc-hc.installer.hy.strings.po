@@ -33,16 +33,16 @@ msgid "Translations"
 msgstr "Թարգմանություններ"
 
 msgctxt "CustomMessages_msg_DeleteSettings"
-msgid "Do you also want to delete MPC-HC settings?\n\nIf you plan on installing MPC-HC again then you do not have to delete them."
-msgstr "Ջնջե՞լ MPC-HC-ի կարգավորումները։\n\nԵթե նախատեսում եք վերատեղադրել MPC-HC, ապա պետք է չէ դրանք ջնջել։."
+msgid "Do you also want to delete Better MPC-HC settings?\n\nIf you plan on installing Better MPC-HC again then you do not have to delete them."
+msgstr "Ջնջե՞լ Better MPC-HC-ի կարգավորումները։\n\nԵթե նախատեսում եք վերատեղադրել Better MPC-HC, ապա պետք է չէ դրանք ջնջել։."
 
 msgctxt "CustomMessages_msg_simd_sse"
-msgid "This build of MPC-HC requires a CPU with SSE extension support.\n\nYour CPU does not have those capabilities."
-msgstr "MPC-HC-ի այս տարբերակը պահանջում է CPU՝ SSE-ի աջակցմամբ։\n\nՁեր CPU-ն այն չի աջակցում։"
+msgid "This build of Better MPC-HC requires a CPU with SSE extension support.\n\nYour CPU does not have those capabilities."
+msgstr "Better MPC-HC-ի այս տարբերակը պահանջում է CPU՝ SSE-ի աջակցմամբ։\n\nՁեր CPU-ն այն չի աջակցում։"
 
 msgctxt "CustomMessages_msg_simd_sse2"
-msgid "This build of MPC-HC requires a CPU with SSE2 extension support.\n\nYour CPU does not have those capabilities."
-msgstr "MPC-HC-ի այս տարբերակը պահանջում է CPU՝ SSE2-ի աջակցմամբ։\n\nՁեր CPU-ն այն չի աջակցում։"
+msgid "This build of Better MPC-HC requires a CPU with SSE2 extension support.\n\nYour CPU does not have those capabilities."
+msgstr "Better MPC-HC-ի այս տարբերակը պահանջում է CPU՝ SSE2-ի աջակցմամբ։\n\nՁեր CPU-ն այն չի աջակցում։"
 
 msgctxt "CustomMessages_run_DownloadToolbarImages"
 msgid "Visit our Wiki page to download toolbar images"

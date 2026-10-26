@@ -757,6 +757,7 @@ CMainFrame::CMainFrame()
     , m_pVideoWnd(nullptr)
     , m_pFullscreenWnd(nullptr)
     , m_OSD(this)
+    , m_skipSegments(this)
     , m_bOSDDisplayTime(false)
     , m_nCurSubtitle(-1)
     , m_lSubtitleShift(0)
@@ -947,6 +948,8 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
     UpdateSkypeHandler();
 
+    VERIFY(m_skipSegments.Create());
+
     return 0;
 }
 
@@ -975,6 +978,8 @@ void CMainFrame::OnDestroy()
         }
         delete m_pFullscreenWnd;
     }
+
+    m_skipSegments.Destroy();
 
     __super::OnDestroy();
 }
@@ -1081,7 +1086,7 @@ void CMainFrame::ShowTrayIcon(bool bShow)
             nid.uCallbackMessage = WM_NOTIFYICON;
             nid.hIcon = (HICON)LoadImage(AfxGetInstanceHandle(), MAKEINTRESOURCE(IDR_MAINFRAME),
                                          IMAGE_ICON, 16, 16, LR_DEFAULTCOLOR);
-            StringCchCopy(nid.szTip, _countof(nid.szTip), _T("MPC-HC"));
+            StringCchCopy(nid.szTip, _countof(nid.szTip), _T("Better MPC-HC"));
             Shell_NotifyIcon(NIM_ADD, &nid);
             m_bTrayIcon = true;
         }
@@ -1122,6 +1127,10 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 
 BOOL CMainFrame::PreTranslateMessage(MSG* pMsg)
 {
+    if (m_skipSegments.PreTranslateMessage(pMsg)) {
+        return TRUE;
+    }
+
     if (pMsg->message == WM_KEYDOWN) {
         /*if (m_fShockwaveGraph
           && (pMsg->wParam == VK_LEFT || pMsg->wParam == VK_RIGHT
@@ -1299,6 +1308,7 @@ void CMainFrame::OnMove(int x, int y)
 
     //MoveVideoWindow(); // This isn't needed, based on my limited tests. If it is needed then please add a description the scenario(s) where it is needed.
     m_wndView.Invalidate();
+    m_skipSegments.UpdateButton();
 
     if (m_bWasSnapped && IsZoomed()) {
         m_bWasSnapped = false;
@@ -1768,6 +1778,7 @@ void CMainFrame::OnTimer(UINT_PTR nIDEvent)
                         }
 
                         m_wndStatusBar.SetStatusTimer(rtNow, rtDur, IsSubresyncBarVisible(), GetTimeFormat());
+                        m_skipSegments.UpdatePosition(rtNow, rtDur);
                         break;
                     case PM_DVD:
                         g_bExternalSubtitleTime = true;
@@ -3255,6 +3266,8 @@ LRESULT CMainFrame::OnFilePostOpenmedia(WPARAM wParam, LPARAM lParam)
     // the media opened successfully, we don't want to jump trough it anymore
     m_nLastSkipDirection = 0;
 
+    m_skipSegments.Reset();
+
     // let the EDL do its magic
     if (s.fEnableEDLEditor) {
         m_wndEditListEditor.OpenFile(m_lastOMD->title);
@@ -3448,6 +3461,7 @@ void CMainFrame::OnFilePostClosemedia(bool bNextIsQueued/* = false*/)
     m_OSD.SetPos(0);
     m_Lcd.SetMediaRange(0, 0);
     m_Lcd.SetMediaPos(0);
+    m_skipSegments.Reset();
 
     if (!bNextIsQueued) {
         UpdateControlState(CMainFrame::UPDATE_LOGO);
@@ -4759,7 +4773,7 @@ void CMainFrame::SaveThumbnails(LPCTSTR fn)
         rts.AddStyle(_T("thumbs"), style);
 
         CStringW str;
-        str.Format(L"{\\an9\\fs%d\\b1\\bord0\\shad0\\1c&Hffffff&}%s", infoheight - 10, L"MPC-HC");
+        str.Format(L"{\\an9\\fs%d\\b1\\bord0\\shad0\\1c&Hffffff&}%s", infoheight - 10, L"Better MPC-HC");
 
         rts.Add(str, true, 0, 1, _T("thumbs"), _T(""), _T(""), CRect(0, 0, 0, 0), -1);
 
@@ -7914,6 +7928,49 @@ void CMainFrame::SetVolumeBoost(UINT nAudioBoost)
     }
 }
 
+bool CMainFrame::StepVolumeAboveMax(bool bUp)
+{
+    const UINT nMaxBoost = 100;
+
+    CComQIPtr<IAudioSwitcherFilter> pASF = FindFilter(__uuidof(CAudioSwitcherFilter), m_pGB);
+    if (!pASF || IsMuted()) {
+        return false;
+    }
+
+    CAppSettings& s = AfxGetAppSettings();
+    CVolumeCtrl& volctrl = m_wndToolBar.m_volctrl;
+    const UINT nStep = std::max(1u, s.nVolumeStep);
+    UINT nBoost = s.nAudioBoost;
+
+    if (bUp) {
+        if (volctrl.GetPos() < volctrl.GetRangeMax()) {
+            return false;
+        }
+        if (nBoost < nMaxBoost) {
+            nBoost = std::min(nBoost + nStep - nBoost % nStep, nMaxBoost);
+        }
+    } else {
+        if (nBoost == 0) {
+            return false;
+        }
+        const UINT m = nBoost % nStep;
+        nBoost -= (m ? m : std::min(nStep, nBoost));
+    }
+
+    s.nAudioBoost = nBoost;
+
+    bool fNormalize, fNormalizeRecover;
+    UINT nMaxNormFactor, nCurrentBoost;
+    pASF->GetNormalizeBoost2(fNormalize, nMaxNormFactor, fNormalizeRecover, nCurrentBoost);
+    pASF->SetNormalizeBoost2(fNormalize, nMaxNormFactor, fNormalizeRecover, nBoost);
+
+    CString strVolume;
+    strVolume.Format(IDS_VOLUME_OSD, volctrl.GetPos() + (int)nBoost);
+    m_OSD.DisplayMessage(OSD_TOPLEFT, strVolume);
+
+    return true;
+}
+
 void CMainFrame::OnUpdatePlayVolumeBoost(CCmdUI* pCmdUI)
 {
     pCmdUI->Enable();
@@ -9864,6 +9921,8 @@ void CMainFrame::MoveVideoWindow(bool fShowStats/* = false*/, bool bSetStoppedVi
     } else {
         m_wndView.SetVideoRect();
     }
+
+    m_skipSegments.UpdateButton();
 }
 
 void CMainFrame::HideVideoWindow(bool fHide)

@@ -896,8 +896,8 @@ msgid "Warning"
 msgstr "警告"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC1"
-msgid "MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
-msgstr "MPC-HC 无法渲染图像中的某些 pin，您的系统中可能没有安装所需的解码器或分离器。"
+msgid "Better MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
+msgstr "Better MPC-HC 无法渲染图像中的某些 pin，您的系统中可能没有安装所需的解码器或分离器。"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC2"
 msgid "The following pin(s) failed to find a connectable filter:"
@@ -1764,8 +1764,8 @@ msgid "Crash reporter"
 msgstr "崩溃报告"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_STATIC"
-msgid "We are sorry, it seems MPC-HC just crashed. :("
-msgstr "非常抱歉，MPC-HC看起来崩溃了。:("
+msgid "We are sorry, it seems Better MPC-HC just crashed. :("
+msgstr "非常抱歉，Better MPC-HC看起来崩溃了。:("
 
 msgctxt "IDD_CRASH_REPORTER_IDC_CHECK1"
 msgid "Send a bug report to help us diagnose and fix the problem."
@@ -1788,10 +1788,10 @@ msgid "Problem description (use English only):"
 msgstr "问题描述 (只能用英文撰写):"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON1"
-msgid "Restart MPC-HC"
-msgstr "重新启动 MPC-HC"
+msgid "Restart Better MPC-HC"
+msgstr "重新启动 Better MPC-HC"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON2"
-msgid "Quit MPC-HC"
-msgstr "退出 MPC-HC"
+msgid "Quit Better MPC-HC"
+msgstr "退出 Better MPC-HC"
 

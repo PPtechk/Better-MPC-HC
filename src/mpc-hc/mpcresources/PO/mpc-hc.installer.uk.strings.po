@@ -33,16 +33,16 @@ msgid "Translations"
 msgstr "Локалізації"
 
 msgctxt "CustomMessages_msg_DeleteSettings"
-msgid "Do you also want to delete MPC-HC settings?\n\nIf you plan on installing MPC-HC again then you do not have to delete them."
-msgstr "Чи хочете ви видалити налаштування MPC-HC?\n\nЯкщо ви плануєте просто повторно встановити MPC-HC, то вам не потрібно їх видаляти."
+msgid "Do you also want to delete Better MPC-HC settings?\n\nIf you plan on installing Better MPC-HC again then you do not have to delete them."
+msgstr "Чи хочете ви видалити налаштування Better MPC-HC?\n\nЯкщо ви плануєте просто повторно встановити Better MPC-HC, то вам не потрібно їх видаляти."
 
 msgctxt "CustomMessages_msg_simd_sse"
-msgid "This build of MPC-HC requires a CPU with SSE extension support.\n\nYour CPU does not have those capabilities."
-msgstr "Для використання даної версії MPC-HC необхідно, щоб ваш процесор підтримував SSE розширення.\n\nАле ваш процесор не підтримує їх."
+msgid "This build of Better MPC-HC requires a CPU with SSE extension support.\n\nYour CPU does not have those capabilities."
+msgstr "Для використання даної версії Better MPC-HC необхідно, щоб ваш процесор підтримував SSE розширення.\n\nАле ваш процесор не підтримує їх."
 
 msgctxt "CustomMessages_msg_simd_sse2"
-msgid "This build of MPC-HC requires a CPU with SSE2 extension support.\n\nYour CPU does not have those capabilities."
-msgstr "Для використання даної версії MPC-HC необхідно, щоб ваш процесор підтримував SSE2 розширення.\n\nАле ваш процесор не підтримує їх."
+msgid "This build of Better MPC-HC requires a CPU with SSE2 extension support.\n\nYour CPU does not have those capabilities."
+msgstr "Для використання даної версії Better MPC-HC необхідно, щоб ваш процесор підтримував SSE2 розширення.\n\nАле ваш процесор не підтримує їх."
 
 msgctxt "CustomMessages_run_DownloadToolbarImages"
 msgid "Visit our Wiki page to download toolbar images"

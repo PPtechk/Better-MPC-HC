@@ -894,8 +894,8 @@ msgid "Warning"
 msgstr "Avertissement"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC1"
-msgid "MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
-msgstr "MPC-HC ne peut pas effectuer le rendu de certains éléments du graphe, les codecs ou filtres nécessaires ne figurent pas sur votre ordinateur."
+msgid "Better MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
+msgstr "Better MPC-HC ne peut pas effectuer le rendu de certains éléments du graphe, les codecs ou filtres nécessaires ne figurent pas sur votre ordinateur."
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC2"
 msgid "The following pin(s) failed to find a connectable filter:"
@@ -1762,8 +1762,8 @@ msgid "Crash reporter"
 msgstr "Rapporteur de plantage"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_STATIC"
-msgid "We are sorry, it seems MPC-HC just crashed. :("
-msgstr "Désolé, il semblerait que MPC-HC vienne de planter. :("
+msgid "We are sorry, it seems Better MPC-HC just crashed. :("
+msgstr "Désolé, il semblerait que Better MPC-HC vienne de planter. :("
 
 msgctxt "IDD_CRASH_REPORTER_IDC_CHECK1"
 msgid "Send a bug report to help us diagnose and fix the problem."
@@ -1786,10 +1786,10 @@ msgid "Problem description (use English only):"
 msgstr "Description du problème (obligatoirement en anglais) :"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON1"
-msgid "Restart MPC-HC"
-msgstr "Redémarrer MPC-HC"
+msgid "Restart Better MPC-HC"
+msgstr "Redémarrer Better MPC-HC"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON2"
-msgid "Quit MPC-HC"
-msgstr "Quitter MPC-HC"
+msgid "Quit Better MPC-HC"
+msgstr "Quitter Better MPC-HC"
 

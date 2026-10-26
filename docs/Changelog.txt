@@ -8,6 +8,17 @@ Legend:
 ! Fixed
 
 
+Better MPC-HC 2.2.1 - 26 October 2026
+=====================================
++ Skip Intro / Skip Outro button for chapters named intro, opening, op, outro, ending, ed or credits
++ The volume keys and the mouse wheel go above 100%, up to 200%, like in VLC
+* Renamed to Better MPC-HC, version 2.2.1, the program file is Better-MPC-HC64.exe
+  (the settings stay in HKCU\Software\MPC-HC\MPC-HC)
+* Builds with the Visual Studio 2019 Build Tools (v140 toolset), the Windows 10 SDK and MSYS2 GCC 16,
+  Windows XP is no longer supported
+! The MinGW runtime DLLs needed by the internal LAV Filters are included
+
+
 1.7.13 - 16 July 2017
 =====================
 * Switched from mhook to MinHook since it's more actively maintained

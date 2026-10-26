@@ -334,6 +334,15 @@
     <ClCompile Include="ShockwaveGraph.cpp">
       <Filter>Graph\Shockwave Flash</Filter>
     </ClCompile>
+    <ClCompile Include="SkipButton.cpp">
+      <Filter>Main View</Filter>
+    </ClCompile>
+    <ClCompile Include="SkipSegmentManager.cpp">
+      <Filter>Main View</Filter>
+    </ClCompile>
+    <ClCompile Include="SkipSegmentProvider.cpp">
+      <Filter>Main View</Filter>
+    </ClCompile>
     <ClCompile Include="SkypeMoodMsgHandler.cpp">
       <Filter>Integration\Skype</Filter>
     </ClCompile>
@@ -720,6 +729,15 @@
     </ClInclude>
     <ClInclude Include="ShockwaveGraph.h">
       <Filter>Graph\Shockwave Flash</Filter>
+    </ClInclude>
+    <ClInclude Include="SkipButton.h">
+      <Filter>Main View</Filter>
+    </ClInclude>
+    <ClInclude Include="SkipSegmentManager.h">
+      <Filter>Main View</Filter>
+    </ClInclude>
+    <ClInclude Include="SkipSegmentProvider.h">
+      <Filter>Main View</Filter>
     </ClInclude>
     <ClInclude Include="SkypeMoodMsgHandler.h">
       <Filter>Integration\Skype</Filter>

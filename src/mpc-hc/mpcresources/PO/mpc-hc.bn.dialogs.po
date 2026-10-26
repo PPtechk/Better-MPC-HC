@@ -898,8 +898,8 @@ msgid "Warning"
 msgstr "সতর্কীকরণ"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC1"
-msgid "MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
-msgstr "MPC-HC গ্রাফে অবস্থিত কিছু পিন রেনডার করতে পারছে না, যথাসম্ভব আপনার সিস্টেমে প্রয়োজনীয় কোডেক বা ফিল্টারসমূহ ইনস্টল করা নেই।"
+msgid "Better MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
+msgstr "Better MPC-HC গ্রাফে অবস্থিত কিছু পিন রেনডার করতে পারছে না, যথাসম্ভব আপনার সিস্টেমে প্রয়োজনীয় কোডেক বা ফিল্টারসমূহ ইনস্টল করা নেই।"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC2"
 msgid "The following pin(s) failed to find a connectable filter:"
@@ -1766,8 +1766,8 @@ msgid "Crash reporter"
 msgstr "আকস্মিক বন্ধ হওয়ার প্রতিবেদন"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_STATIC"
-msgid "We are sorry, it seems MPC-HC just crashed. :("
-msgstr "আমরা অত্যন্ত দুঃখিত, মনে হচ্ছে MPC-HC এইমাত্র চালনা বন্ধ হয়ে গিয়েছিল। :("
+msgid "We are sorry, it seems Better MPC-HC just crashed. :("
+msgstr "আমরা অত্যন্ত দুঃখিত, মনে হচ্ছে Better MPC-HC এইমাত্র চালনা বন্ধ হয়ে গিয়েছিল। :("
 
 msgctxt "IDD_CRASH_REPORTER_IDC_CHECK1"
 msgid "Send a bug report to help us diagnose and fix the problem."
@@ -1790,10 +1790,10 @@ msgid "Problem description (use English only):"
 msgstr "সমস্যার বৃত্তান্ত (শুধুমাত্র ইংরেজি ভাষা ব্যবহার করুন):"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON1"
-msgid "Restart MPC-HC"
-msgstr "MPC-HC বন্ধ করে পুনরায় চালনা করি"
+msgid "Restart Better MPC-HC"
+msgstr "Better MPC-HC বন্ধ করে পুনরায় চালনা করি"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON2"
-msgid "Quit MPC-HC"
-msgstr "MPC-HC বন্ধ করি"
+msgid "Quit Better MPC-HC"
+msgstr "Better MPC-HC বন্ধ করি"
 

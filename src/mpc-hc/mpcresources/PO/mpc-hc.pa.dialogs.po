@@ -893,7 +893,7 @@ msgid "Warning"
 msgstr "ਚੇਤਾਵਨੀ"
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC1"
-msgid "MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
+msgid "Better MPC-HC could not render some of the pins in the graph, you may not have the needed codecs or filters installed on the system."
 msgstr ""
 
 msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC2"
@@ -1761,8 +1761,8 @@ msgid "Crash reporter"
 msgstr "ਕਰੈਸ਼ ਰਿਪੋਰਟਰ"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_STATIC"
-msgid "We are sorry, it seems MPC-HC just crashed. :("
-msgstr "ਸਾਨੂੰ ਅਫਸੋਸ ਹੈ ਕਿ MPC-HC ਕਰੈਸ਼ ਹੋ ਗਿਆ ਹੈ। :("
+msgid "We are sorry, it seems Better MPC-HC just crashed. :("
+msgstr "ਸਾਨੂੰ ਅਫਸੋਸ ਹੈ ਕਿ Better MPC-HC ਕਰੈਸ਼ ਹੋ ਗਿਆ ਹੈ। :("
 
 msgctxt "IDD_CRASH_REPORTER_IDC_CHECK1"
 msgid "Send a bug report to help us diagnose and fix the problem."
@@ -1785,10 +1785,10 @@ msgid "Problem description (use English only):"
 msgstr "ਸਮੱਸਿਆ ਦਾ ਵੇਰਵਾ (ਕੇਵਲ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ):"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON1"
-msgid "Restart MPC-HC"
-msgstr "MPC-HC ਮੁੜ-ਚਾਲੂ ਕਰੋ"
+msgid "Restart Better MPC-HC"
+msgstr "Better MPC-HC ਮੁੜ-ਚਾਲੂ ਕਰੋ"
 
 msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON2"
-msgid "Quit MPC-HC"
-msgstr "MPC-HC ਬੰਦ ਕਰੋ"
+msgid "Quit Better MPC-HC"
+msgstr "Better MPC-HC ਬੰਦ ਕਰੋ"
 
