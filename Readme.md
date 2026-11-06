@@ -46,9 +46,14 @@ Run the installer.
 ### Linux
 
 The AppImage contains the Windows build together with a portable [Wine](https://www.winehq.org), so
-there is nothing else to install. Make it executable (file manager: *Properties → Permissions → Allow
+Wine doesn't have to be installed. What an AppImage does need is **FUSE 2**, and the recent
+distributions ship only FUSE 3, so add it once if it's missing: `sudo apt install libfuse2t64`
+(Ubuntu 24.04 and newer, Debian 13 and newer), `libfuse2` on the older ones, `fuse-libs` on Fedora,
+`fuse2` on Arch. Then make the AppImage executable (file manager: *Properties → Permissions → Allow
 executing file as program*, or `chmod +x Better-MPC-HC-*-x86_64.AppImage`) and double-click it. On the
 first start it adds Better MPC-HC to the application menu and to *Open With* for video and audio files.
+If it doesn't start, run it from a terminal to see the reason; without FUSE it still runs with
+`./Better-MPC-HC-*-x86_64.AppImage --appimage-extract-and-run`.
 Details, removal and the differences from the Windows version: [linux/README.md](linux/README.md).
 
 

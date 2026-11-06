@@ -8,21 +8,54 @@ You don't need to install Wine or anything else.
 
 1. Download `Better-MPC-HC-<version>-x86_64.AppImage` from the
    [latest release](https://github.com/PPtechk/Better-MPC-HC/releases/latest).
-2. Make it executable: in the file manager *Properties → Permissions → Allow executing file as program*,
+2. Make sure **FUSE 2** is installed. Every AppImage needs it to mount itself, and the recent
+   distributions ship only FUSE 3, so on those it has to be added once:
+
+   ```sh
+   sudo apt install libfuse2t64     # Ubuntu 24.04 and newer, Debian 13 and newer
+   sudo apt install libfuse2        # Ubuntu 22.04 and older, Debian 12
+   sudo dnf install fuse-libs       # Fedora
+   sudo pacman -S fuse2             # Arch, Manjaro
+   sudo zypper install libfuse2     # openSUSE
+   ```
+
+   If you can't or don't want to install it, see *If it doesn't start* below: the AppImage can also run
+   without FUSE.
+3. Make it executable: in the file manager *Properties → Permissions → Allow executing file as program*,
    or in a terminal:
 
    ```sh
    chmod +x Better-MPC-HC-*-x86_64.AppImage
    ```
 
-3. Double-click it. The first start takes a few seconds while the player's environment is prepared.
+4. Double-click it. The first start takes a few seconds while the player's environment is prepared.
 
 On the first start the AppImage adds **Better MPC-HC** to the application menu and registers it for the
 common video and audio file types, so you can also choose it in *Open With*. If you move the AppImage,
 start it once from the new place and the menu entry follows it.
 
-Requirements: a 64-bit (x86_64) Linux desktop (X11 or Wayland with XWayland). Every common distribution
-(Ubuntu, Fedora, Debian, Linux Mint, openSUSE, Arch, ...) already has the libraries it needs.
+Requirements: a 64-bit (x86_64) Linux desktop (X11 or Wayland with XWayland) and FUSE 2 (step 2).
+Everything else the player needs is inside the AppImage.
+
+## If it doesn't start
+
+Start it from a terminal, that is the only place where the reason shows up:
+
+```sh
+./Better-MPC-HC-*-x86_64.AppImage
+```
+
+- **`dlopen(): error loading libfuse.so.2`**, *Cannot mount AppImage* or nothing at all on double-click —
+  FUSE 2 is missing, install it as in step 2. If you'd rather not install anything, this runs the AppImage
+  without FUSE by unpacking it to a temporary folder on every start (slower, it is about 160 MB):
+
+  ```sh
+  ./Better-MPC-HC-*-x86_64.AppImage --appimage-extract-and-run
+  ```
+
+- **`Permission denied`** — the file isn't executable yet, see step 3.
+- **A black or distorted picture** — check that the renderer is *VMR-9 (renderless)* in
+  *Options → Playback → Output*, see the next section.
 
 ## Where things are
 
