@@ -267,6 +267,7 @@
 #define IDS_RS_FASTSEEK_METHOD              _T("FastSeekMethod")
 #define IDS_RS_SHOW_CHAPTERS                _T("ShowChapters")
 #define IDS_RS_SHOW_SKIP_BUTTON             _T("ShowSkipButton")
+#define IDS_RS_SKIP_BY_CHAPTER_STRUCTURE    _T("SkipByChapterStructure")
 
 #define IDS_RS_LCD_SUPPORT                  _T("LcdSupport")
 

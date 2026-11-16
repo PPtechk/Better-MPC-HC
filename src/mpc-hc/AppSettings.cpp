@@ -163,6 +163,7 @@ CAppSettings::CAppSettings()
     , eFastSeekMethod(FASTSEEK_NEAREST_KEYFRAME)
     , fShowChapters(true)
     , bShowSkipButton(true)
+    , bSkipByChapterStructure(true)
     , bNotifySkype(false)
     , fPreventMinimize(false)
     , bUseEnhancedTaskBar(true)
@@ -896,6 +897,7 @@ void CAppSettings::SaveSettings()
     pApp->WriteProfileInt(IDS_R_SETTINGS, IDS_RS_FASTSEEK_METHOD, eFastSeekMethod);
     pApp->WriteProfileInt(IDS_R_SETTINGS, IDS_RS_SHOW_CHAPTERS, fShowChapters);
     pApp->WriteProfileInt(IDS_R_SETTINGS, IDS_RS_SHOW_SKIP_BUTTON, bShowSkipButton);
+    pApp->WriteProfileInt(IDS_R_SETTINGS, IDS_RS_SKIP_BY_CHAPTER_STRUCTURE, bSkipByChapterStructure);
 
 
     pApp->WriteProfileInt(IDS_R_SETTINGS, IDS_RS_LCD_SUPPORT, fLCDSupport);
@@ -1734,6 +1736,7 @@ void CAppSettings::LoadSettings()
                                 pApp->GetProfileInt(IDS_R_SETTINGS, IDS_RS_FASTSEEK_METHOD, FASTSEEK_NEAREST_KEYFRAME));
     fShowChapters         = !!pApp->GetProfileInt(IDS_R_SETTINGS, IDS_RS_SHOW_CHAPTERS, TRUE);
     bShowSkipButton       = !!pApp->GetProfileInt(IDS_R_SETTINGS, IDS_RS_SHOW_SKIP_BUTTON, TRUE);
+    bSkipByChapterStructure = !!pApp->GetProfileInt(IDS_R_SETTINGS, IDS_RS_SKIP_BY_CHAPTER_STRUCTURE, TRUE);
 
 
     fLCDSupport = !!pApp->GetProfileInt(IDS_R_SETTINGS, IDS_RS_LCD_SUPPORT, FALSE);

@@ -86,7 +86,29 @@ words: `intro`, `opening`, `op`, `outro`, `ending`, `ed`, `credits`.
   `Opera`, `Edward` or `Development` don't.
 - Numbered variants like `OP1` or `ED02` match too.
 - The part lasts from the start of that chapter to the start of the next chapter (or to the end of the file).
-- Files without such chapter names don't get a button.
+
+**Chapters without names ("Chapter 2").** Many releases have real chapter marks but call them `Chapter 1`,
+`Chapter 2`, and so on. For Matroska files (`.mkv`, `.webm`, `.mka`, `.mk3d`) Better MPC-HC then looks at
+the other episodes in the same folder:
+
+- A chapter of 60 to 130 seconds is an intro candidate if it starts in the first 40% of the file, and an
+  outro candidate if it starts in the second half. The opening and the ending of a series are
+  usually such chapters (about 1.5 minutes), at the same place of the chapter list in the episodes.
+- The place that most episodes agree on wins: at least 60% of the comparable episodes (similar length, with
+  chapters) must have a candidate there, and there must be at least 3 such files including the current one.
+  The chapter of the current file on that place must also be within 20 seconds of the median length
+  of the others.
+- The chapter names win: if the names already show an intro (or an outro) in the file, this method adds
+  no other intro (or outro).
+- The folder is read in the background when a file opens (only the headers, a few kilobytes per file, at most
+  the 60 files around the current one), so the button can appear a moment after the file starts. The chapter
+  tables are remembered while the player runs.
+- Files in other containers (MP4, AVI, ...), files played from a URL, a lone file in its folder and series
+  without such chapters don't get a button this way.
+- In a test with 49 Sword Art Online episodes (all chapters called `Chapter N`) the intro was found in 45
+  of them (always the 2nd chapter) and the outro in 43 (always the 5th); in the others the file has no such
+  chapter. On 37 episodes with real chapter names the method pointed at the same chapter as the names in
+  every case it found something.
 
 **Where the button is.** It stays inside the bottom eighth of the video, on the right. In fullscreen, and
 whenever the controls hide automatically, it is placed just above the area that brings back the hidden
@@ -101,6 +123,8 @@ away.
   nothing can be drawn over the video there. It is only shown when playing files (not DVDs or TV capture).
 - To turn the button off, set the DWORD value `ShowSkipButton` to `0` under
   `HKCU\Software\MPC-HC\MPC-HC\Settings` (there is no options page entry yet).
+- To turn off only the detection by chapter layout (names still work), set the DWORD value
+  `SkipByChapterStructure` to `0` at the same place.
 
 ### Volume above 100% (like VLC)
 
@@ -146,7 +170,7 @@ LAV filters.
 
 | | MPC-HC 1.7.13 | Better MPC-HC 2.2.1 |
 |---|---|---|
-| Skip Intro / Skip Outro | — | Button based on chapter names, click or Enter |
+| Skip Intro / Skip Outro | — | Button based on chapter names, or on the chapter layout of the episodes in the folder (MKV), click or Enter |
 | Volume with keys / mouse wheel | Up to 100% | Up to 200% (audio switcher boost) |
 | Name shown | MPC-HC | Better MPC-HC |
 | Version | 1.7.13 | 2.2.1 |
@@ -190,7 +214,8 @@ are described in [`local-build/README.md`](local-build/README.md); the original 
 
 Compared to the `1.7.13` tag of MPC-HC:
 
-- Skip button: `src/mpc-hc/SkipButton.*`, `SkipSegmentManager.*`, `SkipSegmentProvider.*` (new);
+- Skip button: `src/mpc-hc/SkipButton.*`, `SkipSegmentManager.*`, `SkipSegmentProvider.*`,
+  `SkipStructureProvider.*`, `SkipChapterStructure.*`, `MatroskaChapterReader.*` (new);
   `MainFrm.*`, `AppSettings.*`, `SettingsDefines.h`, `mpc-hc.vcxproj(.filters)`
 - Volume above 100%: `src/mpc-hc/MainFrm.*`, `PlayerToolBar.cpp`
 - Name and version: `include/version.h`, `src/mpc-hc/res/*.rc2`, `res/mpc-hc.exe.manifest.conf`,

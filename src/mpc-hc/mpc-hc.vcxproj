@@ -157,6 +157,7 @@
     <ClCompile Include="FreeviewEPGDecode.cpp" />
     <ClCompile Include="ImageGrayer.cpp" />
     <ClCompile Include="MainFrmControls.cpp" />
+    <ClCompile Include="MatroskaChapterReader.cpp" />
     <ClCompile Include="MediaPositionList.cpp" />
     <ClCompile Include="FloatEdit.cpp" />
     <ClCompile Include="FullscreenWnd.cpp" />
@@ -235,8 +236,10 @@
     <ClCompile Include="Shaders.cpp" />
     <ClCompile Include="ShockwaveGraph.cpp" />
     <ClCompile Include="SkipButton.cpp" />
+    <ClCompile Include="SkipChapterStructure.cpp" />
     <ClCompile Include="SkipSegmentManager.cpp" />
     <ClCompile Include="SkipSegmentProvider.cpp" />
+    <ClCompile Include="SkipStructureProvider.cpp" />
     <ClCompile Include="SkypeMoodMsgHandler.cpp" />
     <ClCompile Include="SVGImage.cpp" />
     <ClCompile Include="Translations.cpp" />
@@ -310,6 +313,7 @@
     <ClInclude Include="Logger.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MainFrmControls.h" />
+    <ClInclude Include="MatroskaChapterReader.h" />
     <ClInclude Include="MediaFormats.h" />
     <ClInclude Include="MediaPositionList.h" />
     <ClInclude Include="MediaTypesDlg.h" />
@@ -383,8 +387,10 @@
     <ClInclude Include="Shaders.h" />
     <ClInclude Include="ShockwaveGraph.h" />
     <ClInclude Include="SkipButton.h" />
+    <ClInclude Include="SkipChapterStructure.h" />
     <ClInclude Include="SkipSegmentManager.h" />
     <ClInclude Include="SkipSegmentProvider.h" />
+    <ClInclude Include="SkipStructureProvider.h" />
     <ClInclude Include="SkypeMoodMsgHandler.h" />
     <ClInclude Include="StaticLink.h" />
     <ClInclude Include="StatusLabel.h" />

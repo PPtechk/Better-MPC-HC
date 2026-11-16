@@ -24,30 +24,40 @@
 
 namespace
 {
-    const LPCTSTR s_skipKeywords[] = {
-        _T("intro"),
-        _T("opening"),
-        _T("op"),
-        _T("outro"),
-        _T("ending"),
-        _T("ed"),
-        _T("credits"),
+    struct SkipKeyword {
+        LPCTSTR keyword;
+        SkipSegmentKind kind;
     };
 
-    bool IsSkipKeyword(CString word)
+    const SkipKeyword s_skipKeywords[] = {
+        { _T("intro"), SKIP_INTRO },
+        { _T("opening"), SKIP_INTRO },
+        { _T("op"), SKIP_INTRO },
+        { _T("outro"), SKIP_OUTRO },
+        { _T("ending"), SKIP_OUTRO },
+        { _T("ed"), SKIP_OUTRO },
+        { _T("credits"), SKIP_OUTRO },
+    };
+
+    SkipSegmentKind GetSkipKeywordKind(CString word)
     {
         word.TrimRight(_T("0123456789"));
         if (word.IsEmpty()) {
-            return false;
+            return SKIP_UNKNOWN;
         }
 
         word.MakeLower();
-        for (LPCTSTR keyword : s_skipKeywords) {
-            if (word == keyword) {
-                return true;
+        for (const SkipKeyword& skipKeyword : s_skipKeywords) {
+            if (word == skipKeyword.keyword) {
+                return skipKeyword.kind;
             }
         }
-        return false;
+        return SKIP_UNKNOWN;
+    }
+
+    bool Overlaps(const SkipSegment& a, const SkipSegment& b)
+    {
+        return a.rtStart < b.rtStop && b.rtStart < a.rtStop;
     }
 }
 
@@ -89,7 +99,8 @@ void CChapterSkipSegmentProvider::GetSkipSegments(REFERENCE_TIME rtDuration, std
     });
 
     for (size_t i = 0; i < chapters.size(); i++) {
-        if (!IsSkipChapterName(chapters[i].name)) {
+        const SkipSegmentKind kind = GetSkipChapterKind(chapters[i].name);
+        if (kind == SKIP_UNKNOWN) {
             continue;
         }
 
@@ -105,12 +116,17 @@ void CChapterSkipSegmentProvider::GetSkipSegments(REFERENCE_TIME rtDuration, std
         }
 
         if (rtStop > chapters[i].rt) {
-            segments.push_back({ chapters[i].rt, rtStop, chapters[i].name });
+            segments.push_back({ chapters[i].rt, rtStop, chapters[i].name, kind });
         }
     }
 }
 
 bool CChapterSkipSegmentProvider::IsSkipChapterName(const CString& name)
+{
+    return GetSkipChapterKind(name) != SKIP_UNKNOWN;
+}
+
+SkipSegmentKind CChapterSkipSegmentProvider::GetSkipChapterKind(const CString& name)
 {
     CString word;
     for (int i = 0, len = name.GetLength(); i <= len; i++) {
@@ -118,11 +134,69 @@ bool CChapterSkipSegmentProvider::IsSkipChapterName(const CString& name)
         if (c && IsCharAlphaNumeric(c)) {
             word += c;
         } else if (!word.IsEmpty()) {
-            if (IsSkipKeyword(word)) {
-                return true;
+            const SkipSegmentKind kind = GetSkipKeywordKind(word);
+            if (kind != SKIP_UNKNOWN) {
+                return kind;
             }
             word.Empty();
         }
     }
+    return SKIP_UNKNOWN;
+}
+
+void CCompositeSkipSegmentProvider::AddProvider(std::unique_ptr<ISkipSegmentProvider> pProvider)
+{
+    m_providers.push_back(std::move(pProvider));
+}
+
+bool CCompositeSkipSegmentProvider::IsDirty() const
+{
+    for (const auto& pProvider : m_providers) {
+        if (pProvider->IsDirty()) {
+            return true;
+        }
+    }
     return false;
+}
+
+void CCompositeSkipSegmentProvider::GetSkipSegments(REFERENCE_TIME rtDuration, std::vector<SkipSegment>& segments)
+{
+    segments.clear();
+
+    // Every provider is asked each time: this is also how it learns that its result was taken
+    for (const auto& pProvider : m_providers) {
+        std::vector<SkipSegment> found;
+        pProvider->GetSkipSegments(rtDuration, found);
+
+        if (segments.empty()) {
+            segments = found;
+            continue;
+        }
+
+        // the segments of the earlier providers: only the kinds they found nothing of can be added
+        const std::vector<SkipSegment> earlier = segments;
+        for (const SkipSegment& segment : found) {
+            bool bAdd = true;
+            for (const SkipSegment& other : earlier) {
+                if (other.kind == segment.kind || Overlaps(other, segment)) {
+                    bAdd = false;
+                    break;
+                }
+            }
+            if (bAdd) {
+                segments.push_back(segment);
+            }
+        }
+    }
+
+    std::stable_sort(segments.begin(), segments.end(), [](const SkipSegment & a, const SkipSegment & b) {
+        return a.rtStart < b.rtStart;
+    });
+}
+
+void CCompositeSkipSegmentProvider::Reset()
+{
+    for (const auto& pProvider : m_providers) {
+        pProvider->Reset();
+    }
 }

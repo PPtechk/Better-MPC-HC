@@ -343,6 +343,15 @@
     <ClCompile Include="SkipSegmentProvider.cpp">
       <Filter>Main View</Filter>
     </ClCompile>
+    <ClCompile Include="SkipStructureProvider.cpp">
+      <Filter>Main View</Filter>
+    </ClCompile>
+    <ClCompile Include="SkipChapterStructure.cpp">
+      <Filter>Main View</Filter>
+    </ClCompile>
+    <ClCompile Include="MatroskaChapterReader.cpp">
+      <Filter>Main View</Filter>
+    </ClCompile>
     <ClCompile Include="SkypeMoodMsgHandler.cpp">
       <Filter>Integration\Skype</Filter>
     </ClCompile>
@@ -737,6 +746,15 @@
       <Filter>Main View</Filter>
     </ClInclude>
     <ClInclude Include="SkipSegmentProvider.h">
+      <Filter>Main View</Filter>
+    </ClInclude>
+    <ClInclude Include="SkipStructureProvider.h">
+      <Filter>Main View</Filter>
+    </ClInclude>
+    <ClInclude Include="SkipChapterStructure.h">
+      <Filter>Main View</Filter>
+    </ClInclude>
+    <ClInclude Include="MatroskaChapterReader.h">
       <Filter>Main View</Filter>
     </ClInclude>
     <ClInclude Include="SkypeMoodMsgHandler.h">

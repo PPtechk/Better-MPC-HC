@@ -55,6 +55,8 @@ private:
     int m_iActiveSegment;
     REFERENCE_TIME m_rtSkippedStart;
 
+    std::unique_ptr<ISkipSegmentProvider> CreateProvider();
+    CString GetCurrentFilePath() const;
     bool CanShowButton() const;
     bool IsVideoWindowMessage(HWND hWnd) const;
     static bool IsPlainEnterAssigned();

@@ -23,6 +23,7 @@ powershell -ExecutionPolicy Bypass -File local-build\check_env.ps1
 | File | Purpose |
 |---|---|
 | `build_installer.cmd` | Applies the submodule patches, then runs the full x64 build and creates the installer (`build.bat Build x64 MPCHC Release Installer`). |
+| `make_beta.ps1` | A telepítő elkészítése és mentése `Beta<N> MPC-HC.exe` néven a tároló feletti mappába gyors teszteléshez (a következő szabad sorszámmal, meglévő fájlt nem ír felül; `-SkipBuild`: a `bin\`-ben lévő telepítőt másolja). |
 | `build_env.cmd` | Runs any command in the build environment from the repository root (see the workarounds below). |
 | `check_env.ps1` | Checks that every tool is in place. |
 | `patches\` | Fixes for the LAV Filters submodules (FFmpeg, QuickSync decoder), see `patches\README.md`. |

@@ -21,12 +21,20 @@
 #pragma once
 
 #include "DSMPropertyBag.h"
+#include <memory>
 #include <vector>
+
+enum SkipSegmentKind {
+    SKIP_UNKNOWN,
+    SKIP_INTRO,
+    SKIP_OUTRO,
+};
 
 struct SkipSegment {
     REFERENCE_TIME rtStart;
     REFERENCE_TIME rtStop;
     CString name;
+    SkipSegmentKind kind;
 };
 
 class ISkipSegmentProvider
@@ -37,6 +45,9 @@ public:
     virtual bool IsDirty() const = 0;
 
     virtual void GetSkipSegments(REFERENCE_TIME rtDuration, std::vector<SkipSegment>& segments) = 0;
+
+    // A new media was opened or the current one was closed
+    virtual void Reset() {}
 };
 
 class CChapterSkipSegmentProvider final : public ISkipSegmentProvider
@@ -48,8 +59,24 @@ public:
     void GetSkipSegments(REFERENCE_TIME rtDuration, std::vector<SkipSegment>& segments) override;
 
     static bool IsSkipChapterName(const CString& name);
+    static SkipSegmentKind GetSkipChapterKind(const CString& name);
 
 private:
     const CComPtr<IDSMChapterBag>& m_pCB;
     CComPtr<IDSMChapterBag> m_pLastCB;
+};
+
+// Merges the segments of several providers. The first provider is the most reliable: a later provider
+// can only add a segment of a kind the earlier ones found nothing of, and only if it doesn't overlap them.
+class CCompositeSkipSegmentProvider final : public ISkipSegmentProvider
+{
+public:
+    void AddProvider(std::unique_ptr<ISkipSegmentProvider> pProvider);
+
+    bool IsDirty() const override;
+    void GetSkipSegments(REFERENCE_TIME rtDuration, std::vector<SkipSegment>& segments) override;
+    void Reset() override;
+
+private:
+    std::vector<std::unique_ptr<ISkipSegmentProvider>> m_providers;
 };

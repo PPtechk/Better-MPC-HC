@@ -20,19 +20,37 @@
 
 #include "stdafx.h"
 #include "SkipSegmentManager.h"
+#include "SkipStructureProvider.h"
 #include "MainFrm.h"
 #include "mplayerc.h"
 #include <mvrInterfaces.h>
 
 CSkipSegmentManager::CSkipSegmentManager(CMainFrame* pMainFrame)
     : m_pMainFrame(pMainFrame)
-    , m_pProvider(std::make_unique<CChapterSkipSegmentProvider>(pMainFrame->m_pCB))
+    , m_pProvider(CreateProvider())
     , m_button(pMainFrame)
     , m_bSegmentsValid(false)
     , m_rtDuration(0)
     , m_iActiveSegment(-1)
     , m_rtSkippedStart(-1)
 {
+}
+
+std::unique_ptr<ISkipSegmentProvider> CSkipSegmentManager::CreateProvider()
+{
+    // The chapter names are the most reliable, the chapter layout of the other episodes fills the gaps
+    auto pProvider = std::make_unique<CCompositeSkipSegmentProvider>();
+    pProvider->AddProvider(std::make_unique<CChapterSkipSegmentProvider>(m_pMainFrame->m_pCB));
+    pProvider->AddProvider(std::make_unique<CStructureSkipSegmentProvider>(m_pMainFrame->m_pCB, [this]() {
+        return GetCurrentFilePath();
+    }));
+    return std::move(pProvider);
+}
+
+CString CSkipSegmentManager::GetCurrentFilePath() const
+{
+    const auto pFileData = dynamic_cast<const OpenFileData*>(m_pMainFrame->m_lastOMD.m_p);
+    return (pFileData && !pFileData->fns.IsEmpty()) ? pFileData->fns.GetHead() : CString();
 }
 
 bool CSkipSegmentManager::Create()
@@ -51,6 +69,8 @@ void CSkipSegmentManager::Destroy()
 
 void CSkipSegmentManager::Reset()
 {
+    m_pProvider->Reset();
+
     m_segments.clear();
     m_bSegmentsValid = false;
     m_rtDuration = 0;
