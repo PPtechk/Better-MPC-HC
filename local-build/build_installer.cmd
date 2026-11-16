@@ -1,6 +1,6 @@
 @ECHO OFF
 REM Builds Better MPC-HC x64 Release with the translations and creates the installer
-REM (bin\Better-MPC-HC.2.2.1.x64.exe). See README.md in this folder.
+REM (bin\Better-MPC-HC.2.2.3.x64.exe). See README.md in this folder.
 SETLOCAL
 
 REM The fixes needed inside the LAV Filters submodules are kept as patches (see patches\README.md)

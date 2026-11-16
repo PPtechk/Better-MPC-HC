@@ -1,6 +1,6 @@
 # Building Better MPC-HC
 
-This folder describes how the `bin\Better-MPC-HC.2.2.1.x64.exe` installer is built on a current
+This folder describes how the `bin\Better-MPC-HC.2.2.3.x64.exe` installer is built on a current
 Windows 10/11 machine. The original MPC-HC 1.7.13 build expects tools that can no longer be installed
 (Visual Studio 2015, the Windows 7.1A/8.1 SDKs, the 2017 MinGW toolchain), so these scripts adapt the
 original `build.bat` to a modern toolchain.
@@ -11,7 +11,7 @@ original `build.bat` to a modern toolchain.
 local-build\build_installer.cmd
 ```
 
-Result: `bin\Better-MPC-HC.2.2.1.x64.exe` (x64, Release, 42 languages, unsigned).
+Result: `bin\Better-MPC-HC.2.2.3.x64.exe` (x64, Release, 42 languages, unsigned).
 To check the environment only:
 
 ```bat
@@ -115,4 +115,4 @@ opened. MPC-HC loads LAV with `LOAD_WITH_ALTERED_SEARCH_PATH` (`src\DSUtil\DSUti
 - Because of the Windows 10 SDK headers the shader compiler loads `d3dcompiler_47.dll` (part of
   Windows 10/11); `D3DCompiler_43.dll` is still packaged.
 - The installer and the binaries are unsigned (no `signinfo.txt`).
-- The About box shows `2.2.1 (<commit hash>)`, taken from `git describe` by `version.sh`.
+- The About box shows `2.2.3 (<commit hash>)`, taken from `git describe` by `version.sh`.

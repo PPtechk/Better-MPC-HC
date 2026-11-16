@@ -24,8 +24,8 @@ From the [latest release](https://github.com/PPtechk/Better-MPC-HC/releases/late
 
 | System | File |
 |---|---|
-| Windows 10/11, 64-bit | `Better-MPC-HC.2.2.1.x64.exe` (installer) |
-| Linux, 64-bit (x86_64) | `Better-MPC-HC-2.2.1-x86_64.AppImage` |
+| Windows 10/11, 64-bit | `Better-MPC-HC.2.2.3.x64.exe` (installer) |
+| Linux, 64-bit (x86_64) | `Better-MPC-HC-2.2.1-x86_64.AppImage`, from [release 2.2.1](https://github.com/PPtechk/Better-MPC-HC/releases/tag/2.2.1) (without the 2.2.3 changes) |
 
 ### Windows
 
@@ -64,7 +64,7 @@ Better MPC-HC is based on the MPC-HC 1.7.13 source code. On top of it, it adds:
 1. a button to skip intros and outros,
 2. volume up to 200% with the keyboard and the mouse wheel,
 3. a build setup that works with today's development tools,
-4. its own name and version number (2.2.1), so it is not mixed up with the official MPC-HC.
+4. its own name and version number (2.2.3), so it is not mixed up with the official MPC-HC.
 
 Everything else works like in MPC-HC 1.7.13: the internal LAV Filters (0.70.2), the video renderers
 (EVR-CP, madVR support, ...), subtitles, shaders, color management, the web interface, the 42 translations
@@ -174,7 +174,7 @@ The program shows **Better MPC-HC** everywhere you see a name: title bar, About 
 Explorer context menu (*Play with Better MPC-HC*, *Add to Better MPC-HC Playlist*), messages in all
 42 languages, file properties, the installer, the install folder (`C:\Program Files\Better MPC-HC`),
 Start menu and desktop shortcuts. The program file is `Better-MPC-HC64.exe` (its optional settings file
-in portable mode is `Better-MPC-HC64.ini`). The version is **2.2.1**.
+in portable mode is `Better-MPC-HC64.ini`). The version is **2.2.3**.
 
 Intentionally unchanged, so that existing setups keep working:
 - the settings location (`HKCU\Software\MPC-HC\MPC-HC`),
@@ -195,12 +195,12 @@ LAV filters.
 
 ## Differences from MPC-HC 1.7.13
 
-| | MPC-HC 1.7.13 | Better MPC-HC 2.2.1 |
+| | MPC-HC 1.7.13 | Better MPC-HC 2.2.3 |
 |---|---|---|
 | Skip Intro / Skip Outro | — | Button based on chapter names, the chapter layout of the episodes in the folder (MKV), or the audio they share; click or Enter |
 | Volume with keys / mouse wheel | Up to 100% | Up to 200% (audio switcher boost) |
 | Name shown | MPC-HC | Better MPC-HC |
-| Version | 1.7.13 | 2.2.1 |
+| Version | 1.7.13 | 2.2.3 |
 | Published builds | Windows 32-bit and 64-bit | Windows 64-bit, Linux x86_64 (AppImage with Wine) |
 | Windows versions | XP SP3 – 10 | Windows 10 and 11 (no XP support) |
 | Compiler | Visual Studio 2015 (v140_xp), Windows 8.1 SDK | VS 2019 Build Tools (v140), Windows 10 SDK 10.0.19041 |
@@ -233,7 +233,7 @@ local-build\build_installer.cmd
 ```
 
 The `-c url...` options are needed because some LAV Filters submodules moved since 2017.
-The installer is created as `bin\Better-MPC-HC.2.2.1.x64.exe`. The required tools and the one-time setup
+The installer is created as `bin\Better-MPC-HC.2.2.3.x64.exe`. The required tools and the one-time setup
 are described in [`local-build/README.md`](local-build/README.md); the original MPC-HC instructions are in
 [`docs/Compilation.md`](docs/Compilation.md).
 
