@@ -46,6 +46,16 @@ public:
 
     virtual void GetSkipSegments(REFERENCE_TIME rtDuration, std::vector<SkipSegment>& segments) = 0;
 
+    // True while the provider is still working on the current file: its segments can still change
+    virtual bool IsPending() const { return false; }
+
+    // The segments the more reliable providers found, given before GetSkipSegments(). bFinal: none of
+    // them is still working on the current file.
+    virtual void SetEarlierSegments(const std::vector<SkipSegment>& earlier, bool bFinal) {
+        UNREFERENCED_PARAMETER(earlier);
+        UNREFERENCED_PARAMETER(bFinal);
+    }
+
     // A new media was opened or the current one was closed
     virtual void Reset() {}
 };
@@ -68,12 +78,14 @@ private:
 
 // Merges the segments of several providers. The first provider is the most reliable: a later provider
 // can only add a segment of a kind the earlier ones found nothing of, and only if it doesn't overlap them.
+// Every provider learns what the earlier ones found (SetEarlierSegments), so a slow one can wait for them.
 class CCompositeSkipSegmentProvider final : public ISkipSegmentProvider
 {
 public:
     void AddProvider(std::unique_ptr<ISkipSegmentProvider> pProvider);
 
     bool IsDirty() const override;
+    bool IsPending() const override;
     void GetSkipSegments(REFERENCE_TIME rtDuration, std::vector<SkipSegment>& segments) override;
     void Reset() override;
 

@@ -619,6 +619,7 @@ public:
     bool            fShowChapters;
     bool            bShowSkipButton;
     bool            bSkipByChapterStructure;
+    bool            bSkipByAudio;
     bool            bNotifySkype;
     bool            fPreventMinimize;
     bool            bUseEnhancedTaskBar;

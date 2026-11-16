@@ -21,6 +21,7 @@
 #include "stdafx.h"
 #include "SkipSegmentManager.h"
 #include "SkipStructureProvider.h"
+#include "SkipAudioProvider.h"
 #include "MainFrm.h"
 #include "mplayerc.h"
 #include <mvrInterfaces.h>
@@ -38,12 +39,15 @@ CSkipSegmentManager::CSkipSegmentManager(CMainFrame* pMainFrame)
 
 std::unique_ptr<ISkipSegmentProvider> CSkipSegmentManager::CreateProvider()
 {
-    // The chapter names are the most reliable, the chapter layout of the other episodes fills the gaps
+    // The chapter names are the most reliable, the chapter layout of the other episodes fills the gaps,
+    // and when both miss the intro or the outro, the audio shared with the other episodes is analysed
+    auto getCurrentPath = [this]() {
+        return GetCurrentFilePath();
+    };
     auto pProvider = std::make_unique<CCompositeSkipSegmentProvider>();
     pProvider->AddProvider(std::make_unique<CChapterSkipSegmentProvider>(m_pMainFrame->m_pCB));
-    pProvider->AddProvider(std::make_unique<CStructureSkipSegmentProvider>(m_pMainFrame->m_pCB, [this]() {
-        return GetCurrentFilePath();
-    }));
+    pProvider->AddProvider(std::make_unique<CStructureSkipSegmentProvider>(m_pMainFrame->m_pCB, getCurrentPath));
+    pProvider->AddProvider(std::make_unique<CAudioSkipSegmentProvider>(getCurrentPath));
     return std::move(pProvider);
 }
 

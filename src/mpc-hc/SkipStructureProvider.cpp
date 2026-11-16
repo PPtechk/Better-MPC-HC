@@ -108,6 +108,11 @@ bool CStructureSkipSegmentProvider::IsDirty() const
     return m_pCB.p != m_pLastCB.p || (m_pLoad && m_pLoad->bDone && !m_bLoadConsumed);
 }
 
+bool CStructureSkipSegmentProvider::IsPending() const
+{
+    return m_pLoad && !m_bLoadConsumed;
+}
+
 void CStructureSkipSegmentProvider::Reset()
 {
     if (m_pLoad) {

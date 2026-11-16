@@ -159,19 +159,28 @@ bool CCompositeSkipSegmentProvider::IsDirty() const
     return false;
 }
 
+bool CCompositeSkipSegmentProvider::IsPending() const
+{
+    for (const auto& pProvider : m_providers) {
+        if (pProvider->IsPending()) {
+            return true;
+        }
+    }
+    return false;
+}
+
 void CCompositeSkipSegmentProvider::GetSkipSegments(REFERENCE_TIME rtDuration, std::vector<SkipSegment>& segments)
 {
     segments.clear();
 
     // Every provider is asked each time: this is also how it learns that its result was taken
+    bool bEarlierPending = false;
     for (const auto& pProvider : m_providers) {
+        pProvider->SetEarlierSegments(segments, !bEarlierPending);
+
         std::vector<SkipSegment> found;
         pProvider->GetSkipSegments(rtDuration, found);
-
-        if (segments.empty()) {
-            segments = found;
-            continue;
-        }
+        bEarlierPending = bEarlierPending || pProvider->IsPending();
 
         // the segments of the earlier providers: only the kinds they found nothing of can be added
         const std::vector<SkipSegment> earlier = segments;

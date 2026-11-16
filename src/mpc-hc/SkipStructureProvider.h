@@ -37,6 +37,7 @@ public:
     ~CStructureSkipSegmentProvider();
 
     bool IsDirty() const override;
+    bool IsPending() const override;
     void GetSkipSegments(REFERENCE_TIME rtDuration, std::vector<SkipSegment>& segments) override;
     void Reset() override;
 

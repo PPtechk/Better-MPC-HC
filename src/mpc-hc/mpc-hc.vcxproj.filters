@@ -352,6 +352,15 @@
     <ClCompile Include="MatroskaChapterReader.cpp">
       <Filter>Main View</Filter>
     </ClCompile>
+    <ClCompile Include="SkipAudioProvider.cpp">
+      <Filter>Main View</Filter>
+    </ClCompile>
+    <ClCompile Include="SkipAudioFingerprint.cpp">
+      <Filter>Main View</Filter>
+    </ClCompile>
+    <ClCompile Include="SkipAudioDecoder.cpp">
+      <Filter>Main View</Filter>
+    </ClCompile>
     <ClCompile Include="SkypeMoodMsgHandler.cpp">
       <Filter>Integration\Skype</Filter>
     </ClCompile>
@@ -755,6 +764,15 @@
       <Filter>Main View</Filter>
     </ClInclude>
     <ClInclude Include="MatroskaChapterReader.h">
+      <Filter>Main View</Filter>
+    </ClInclude>
+    <ClInclude Include="SkipAudioProvider.h">
+      <Filter>Main View</Filter>
+    </ClInclude>
+    <ClInclude Include="SkipAudioFingerprint.h">
+      <Filter>Main View</Filter>
+    </ClInclude>
+    <ClInclude Include="SkipAudioDecoder.h">
       <Filter>Main View</Filter>
     </ClInclude>
     <ClInclude Include="SkypeMoodMsgHandler.h">

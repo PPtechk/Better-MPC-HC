@@ -110,6 +110,33 @@ the other episodes in the same folder:
   chapter. On 37 episodes with real chapter names the method pointed at the same chapter as the names in
   every case it found something.
 
+**No usable chapters: the audio.** When neither the chapter names nor the chapter layout show the intro or
+the outro (files without chapters, other containers, special episodes), Better MPC-HC listens for them: the
+opening and the ending song is the same in every episode, so the part of the audio that the other episodes
+in the folder also have is the intro or the outro.
+
+- Only what is still missing is looked for: if the chapters show the intro, only the outro is analysed.
+- The first 40% of the file (at most 10 minutes) is searched for the intro, the last 40% (at most 6 minutes)
+  for the outro. The audio is turned into a fingerprint (energy changes of 33 frequency bands, 10.8 times
+  per second) and compared with the same part of the neighbouring episodes (the next and the previous one
+  in name order first, at most 4 comparable files of 60%-160% of the length).
+- A common part of 15 seconds to 4 minutes counts. It must be found in 2 other episodes (or in the only
+  other one, if there is just one), and where it ends must agree within 6 seconds. The skip goes to the
+  earliest of these ends, so it never jumps into the episode.
+- The audio is decoded with the FFmpeg libraries of the internal LAV Filters, on a background thread with
+  low CPU and disk priority. The first episode of a series takes about 15-30 seconds (the button appears
+  after that), the next ones only need the new neighbour. The fingerprints are kept in
+  `%LOCALAPPDATA%\MPC-HC\SkipAudioCache` (about 40 KB per episode, the oldest go above 4000 files), or in
+  the program folder when the settings are stored in an `.ini` file.
+- In a test with 86 episodes (Sword Art Online S1-S2, Yuru Camp S1-S3) every intro and outro shown by the
+  named chapters of Yuru Camp was found (68 of 68); the end was 0-2 seconds before the chapter end in most
+  cases and at most 6 seconds before it. In Sword Art Online, whose chapter marks are 4-12 seconds off,
+  the audio ends where the episode title card and the next-episode card start. In a folder of unrelated
+  specials (different lengths, each with its own song) nothing was found, as it should be.
+
+**Order.** The chapter names come first, then the chapter layout, then the audio. A later method only adds
+a part of a kind (intro or outro) the earlier ones didn't find.
+
 **Where the button is.** It stays inside the bottom eighth of the video, on the right. In fullscreen, and
 whenever the controls hide automatically, it is placed just above the area that brings back the hidden
 toolbar. So you can move the mouse onto the button without making the toolbar pop up and the button jump
@@ -124,7 +151,7 @@ away.
 - To turn the button off, set the DWORD value `ShowSkipButton` to `0` under
   `HKCU\Software\MPC-HC\MPC-HC\Settings` (there is no options page entry yet).
 - To turn off only the detection by chapter layout (names still work), set the DWORD value
-  `SkipByChapterStructure` to `0` at the same place.
+  `SkipByChapterStructure` to `0` at the same place. `SkipByAudio` set to `0` turns off the audio analysis.
 
 ### Volume above 100% (like VLC)
 
@@ -170,7 +197,7 @@ LAV filters.
 
 | | MPC-HC 1.7.13 | Better MPC-HC 2.2.1 |
 |---|---|---|
-| Skip Intro / Skip Outro | — | Button based on chapter names, or on the chapter layout of the episodes in the folder (MKV), click or Enter |
+| Skip Intro / Skip Outro | — | Button based on chapter names, the chapter layout of the episodes in the folder (MKV), or the audio they share; click or Enter |
 | Volume with keys / mouse wheel | Up to 100% | Up to 200% (audio switcher boost) |
 | Name shown | MPC-HC | Better MPC-HC |
 | Version | 1.7.13 | 2.2.1 |
@@ -215,7 +242,8 @@ are described in [`local-build/README.md`](local-build/README.md); the original 
 Compared to the `1.7.13` tag of MPC-HC:
 
 - Skip button: `src/mpc-hc/SkipButton.*`, `SkipSegmentManager.*`, `SkipSegmentProvider.*`,
-  `SkipStructureProvider.*`, `SkipChapterStructure.*`, `MatroskaChapterReader.*` (new);
+  `SkipStructureProvider.*`, `SkipChapterStructure.*`, `MatroskaChapterReader.*`, `SkipAudioProvider.*`,
+  `SkipAudioFingerprint.*`, `SkipAudioDecoder.*` (new);
   `MainFrm.*`, `AppSettings.*`, `SettingsDefines.h`, `mpc-hc.vcxproj(.filters)`
 - Volume above 100%: `src/mpc-hc/MainFrm.*`, `PlayerToolBar.cpp`
 - Name and version: `include/version.h`, `src/mpc-hc/res/*.rc2`, `res/mpc-hc.exe.manifest.conf`,

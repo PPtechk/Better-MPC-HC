@@ -164,6 +164,7 @@ CAppSettings::CAppSettings()
     , fShowChapters(true)
     , bShowSkipButton(true)
     , bSkipByChapterStructure(true)
+    , bSkipByAudio(true)
     , bNotifySkype(false)
     , fPreventMinimize(false)
     , bUseEnhancedTaskBar(true)
@@ -898,6 +899,7 @@ void CAppSettings::SaveSettings()
     pApp->WriteProfileInt(IDS_R_SETTINGS, IDS_RS_SHOW_CHAPTERS, fShowChapters);
     pApp->WriteProfileInt(IDS_R_SETTINGS, IDS_RS_SHOW_SKIP_BUTTON, bShowSkipButton);
     pApp->WriteProfileInt(IDS_R_SETTINGS, IDS_RS_SKIP_BY_CHAPTER_STRUCTURE, bSkipByChapterStructure);
+    pApp->WriteProfileInt(IDS_R_SETTINGS, IDS_RS_SKIP_BY_AUDIO, bSkipByAudio);
 
 
     pApp->WriteProfileInt(IDS_R_SETTINGS, IDS_RS_LCD_SUPPORT, fLCDSupport);
@@ -1737,6 +1739,7 @@ void CAppSettings::LoadSettings()
     fShowChapters         = !!pApp->GetProfileInt(IDS_R_SETTINGS, IDS_RS_SHOW_CHAPTERS, TRUE);
     bShowSkipButton       = !!pApp->GetProfileInt(IDS_R_SETTINGS, IDS_RS_SHOW_SKIP_BUTTON, TRUE);
     bSkipByChapterStructure = !!pApp->GetProfileInt(IDS_R_SETTINGS, IDS_RS_SKIP_BY_CHAPTER_STRUCTURE, TRUE);
+    bSkipByAudio          = !!pApp->GetProfileInt(IDS_R_SETTINGS, IDS_RS_SKIP_BY_AUDIO, TRUE);
 
 
     fLCDSupport = !!pApp->GetProfileInt(IDS_R_SETTINGS, IDS_RS_LCD_SUPPORT, FALSE);

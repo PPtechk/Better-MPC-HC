@@ -235,6 +235,12 @@
     <ClCompile Include="SelectMediaType.cpp" />
     <ClCompile Include="Shaders.cpp" />
     <ClCompile Include="ShockwaveGraph.cpp" />
+    <ClCompile Include="SkipAudioDecoder.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>..\thirdparty\LAVFilters\src\ffmpeg;..\thirdparty\LAVFilters\src\bin_$(Platform)\thirdparty\ffmpeg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="SkipAudioFingerprint.cpp" />
+    <ClCompile Include="SkipAudioProvider.cpp" />
     <ClCompile Include="SkipButton.cpp" />
     <ClCompile Include="SkipChapterStructure.cpp" />
     <ClCompile Include="SkipSegmentManager.cpp" />
@@ -386,6 +392,9 @@
     <ClInclude Include="SettingsDefines.h" />
     <ClInclude Include="Shaders.h" />
     <ClInclude Include="ShockwaveGraph.h" />
+    <ClInclude Include="SkipAudioDecoder.h" />
+    <ClInclude Include="SkipAudioFingerprint.h" />
+    <ClInclude Include="SkipAudioProvider.h" />
     <ClInclude Include="SkipButton.h" />
     <ClInclude Include="SkipChapterStructure.h" />
     <ClInclude Include="SkipSegmentManager.h" />
